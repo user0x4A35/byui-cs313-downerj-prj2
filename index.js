@@ -1,6 +1,7 @@
 // external imports
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 // local imports
 const epChipList = require('./modules/ep-chip-list.js');
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 express()
     .use(express.static(path.join(__dirname, 'public')))
+    .use(bodyParser)
     .set('views', path.join(__dirname, 'views'))
     .set('view engine', 'ejs')
     // static pages
