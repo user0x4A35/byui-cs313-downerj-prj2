@@ -17,7 +17,7 @@ CREATE TYPE prj2_chip_code AS ENUM (
     'A', 'B', 'C', 'D', 'E', 'F', 'G',
     'H', 'I', 'J', 'K', 'L', 'M', 'N',
     'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-    'V', 'W', 'X', 'Y', 'Z'
+    'V', 'W', 'X', 'Y', 'Z', '*'
 );
 
 CREATE TABLE prj2_chip_code_combo (
@@ -43,3 +43,5 @@ CREATE TABLE prj2_player_to_chip (
       player        INT REFERENCES prj2_player_auth (id) NOT NULL
     , chipcodecombo INT REFERENCES prj2_chip_code_combo (id) NOT NULL
 );
+
+INSERT INTO prj2_chip_element (name) VALUES ('None');
