@@ -3,7 +3,10 @@ const express = require('express');
 const path = require('path');
 
 // local imports
-const endpoints = require('./modules/endpoints.js');
+const epChipList = require('./modules/ep-chip-list.js');
+const epPlayer = require('./modules/ep-player.js');
+const epAuth = require('./modules/ep-auth.js');
+const epRedir = require('./modules/ep-redir.js');
 
 // constants
 const PORT = process.env.PORT || 5000;
@@ -15,19 +18,19 @@ express()
     // static pages
     .get('/', (req, res) => res.sendFile('index.html'))
     // endpoint: chip list
-    .put('/chiplist', () => {})
-    .post('/chiplist', () => {})
-    .get('/chiplist', () => {})
+    .put('/chiplist', epChipList.doPut)
+    .post('/chiplist', epChipList.doPost)
+    .get('/chiplist', epChipList.doGet)
     // endpoint: player
-    .put('/player', () => {})
-    .post('/player', () => {})
-    .get('/player', () => {})
+    .put('/player', epPlayer.doPut
+    .post('/player', epPlayer.doPost)
+    .get('/player', epPlayer.doGet)
     // endpoint: auth
-    .put('/auth', () => {})
-    .post('/auth', () => {})
-    .get('/auth', () => {})
+    .put('/auth', epAuth.doPut)
+    .post('/auth', epAuth.doPost)
+    .get('/auth', epAuth.doGet)
     // endpoint: others (404)
-    .use(() => {})
+    .use(epRedir.doNotFound)
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 // for reference: render EJS
