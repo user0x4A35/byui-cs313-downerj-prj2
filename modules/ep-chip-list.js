@@ -3,11 +3,11 @@ module.exports = {
 
     },
 
-    goPost: (req, res) => {
+    doPost: (req, res) => {
 
     },
 
-    goPut: (req, res) => {
+    doPut: (req, res) => {
 
     },
 };

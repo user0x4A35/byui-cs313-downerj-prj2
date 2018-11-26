@@ -22,7 +22,7 @@ express()
     .post('/chiplist', epChipList.doPost)
     .get('/chiplist', epChipList.doGet)
     // endpoint: player
-    .put('/player', epPlayer.doPut
+    .put('/player', epPlayer.doPut)
     .post('/player', epPlayer.doPost)
     .get('/player', epPlayer.doGet)
     // endpoint: auth
