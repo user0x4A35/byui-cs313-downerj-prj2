@@ -1,0 +1,1536 @@
+{
+    "chips": {
+        "standard": [{
+            "codes": ["A", "B", "C", "D", "E", "*"],
+            "damage": 40,
+            "description": "Cannon to attack 1 enemy",
+            "element": "",
+            "id": 1,
+            "memory": 12,
+            "name": "Cannon"
+        }, {
+            "codes": ["H", "I", "J", "K", "L", "*"],
+            "damage": 60,
+            "description": "Cannon to attack 1 enemy",
+            "element": "",
+            "id": 2,
+            "memory": 24,
+            "name": "HiCannon"
+        }, {
+            "codes": ["O", "P", "Q", "R", "S"],
+            "damage": 80,
+            "description": "Cannon to attack 1 enemy",
+            "element": "",
+            "id": 3,
+            "memory": 36,
+            "name": "M-Cannon"
+        }, {
+            "codes": ["*"],
+            "damage": 20,
+            "description": "Knocks enemy back 1",
+            "element": "",
+            "id": 4,
+            "memory": 6,
+            "name": "AirShot1"
+        }, {
+            "codes": ["*"],
+            "damage": 30,
+            "description": "Knocks enemy back 1",
+            "element": "",
+            "id": 5,
+            "memory": 12,
+            "name": "AirShot2"
+        }, {
+            "codes": ["*"],
+            "damage": 40,
+            "description": "Knocks enemy back 1",
+            "element": "",
+            "id": 6,
+            "memory": 18,
+            "name": "AirShot3"
+        }, {
+            "codes": ["A", "G", "S", "T", "V"],
+            "damage": 90,
+            "description": "Fires lava fr. area",
+            "element": "",
+            "id": 7,
+            "memory": 34,
+            "name": "LavaCan1"
+        }, {
+            "codes": ["B", "D", "F", "M", "O"],
+            "damage": 120,
+            "description": "Fires lava fr. area",
+            "element": "",
+            "id": 8,
+            "memory": 42,
+            "name": "LavaCan2"
+        }, {
+            "codes": ["E", "H", "J", "R", "W"],
+            "damage": 150,
+            "description": "Fires lava fr. area",
+            "element": "",
+            "id": 9,
+            "memory": 60,
+            "name": "LavaCan3"
+        }, {
+            "codes": ["A", "G", "J", "Y", "Z"],
+            "damage": 150,
+            "description": "Fire lava from your area",
+            "element": "",
+            "id": 10,
+            "memory": 75,
+            "name": "Volcano"
+        }, {
+            "codes": ["B", "F", "J", "N", "T", "*"],
+            "damage": 30,
+            "description": "Explodes 1 square behind",
+            "element": "",
+            "id": 11,
+            "memory": 8,
+            "name": "ShotGun"
+        }, {
+            "codes": ["D", "G", "L", "P", "V", "*"],
+            "damage": 30,
+            "description": "Explodes 2 diag. squares",
+            "element": "",
+            "id": 12,
+            "memory": 8,
+            "name": "V-Gun"
+        }, {
+            "codes": ["C", "H", "M", "S", "Y", "*"],
+            "damage": 30,
+            "description": "Explodes up, down on hit",
+            "element": "",
+            "id": 13,
+            "memory": 8,
+            "name": "SideGun"
+        }, {
+            "codes": ["M", "N", "O", "P", "Q", "*"],
+            "damage": 30,
+            "description": "Creates a large explosion",
+            "element": "",
+            "id": 14,
+            "memory": 16,
+            "name": "Spreader"
+        }, {
+            "codes": ["A", "C", "D", "E", "P", "*"],
+            "damage": 60,
+            "description": "Explodes 1 square behind",
+            "element": "",
+            "id": 15,
+            "memory": 14,
+            "name": "Bubbler"
+        }, {
+            "codes": ["D", "E", "F", "S", "V"],
+            "damage": 60,
+            "description": "Explodes 2 diag. squares",
+            "element": "",
+            "id": 16,
+            "memory": 22,
+            "name": "Bub-V"
+        }, {
+            "codes": ["B", "E", "F", "G", "R"],
+            "damage": 60,
+            "description": "Explodes up, down on hit",
+            "element": "",
+            "id": 17,
+            "memory": 30,
+            "name": "BublSide"
+        }, {
+            "codes": ["B", "H", "I", "J", "P", "*"],
+            "damage": 40,
+            "description": "Explodes 1 square behind",
+            "element": "",
+            "id": 18,
+            "memory": 16,
+            "name": "HeatShot"
+        }, {
+            "codes": ["F", "I", "J", "K", "V"],
+            "damage": 40,
+            "description": "Explodes 2 diag. squares",
+            "element": "",
+            "id": 19,
+            "memory": 24,
+            "name": "Heat-V"
+        }, {
+            "codes": ["C", "J", "K", "L", "T"],
+            "damage": 40,
+            "description": "Explodes up, down on hit",
+            "element": "",
+            "id": 20,
+            "memory": 32,
+            "name": "HeatSide"
+        }, {
+            "codes": ["B", "G", "L", "O", "S", "*"],
+            "damage": 50,
+            "description": "Throws a bomb 3 squares",
+            "element": "",
+            "id": 21,
+            "memory": 6,
+            "name": "MiniBomb"
+        }, {
+            "codes": ["D", "F", "H", "J", "T", "*"],
+            "damage": 50,
+            "description": "Throws a big bomb 3 squares",
+            "element": "",
+            "id": 22,
+            "memory": 12,
+            "name": "SnglBomb"
+        }, {
+            "codes": ["A", "C", "H", "K", "Q", "*"],
+            "damage": 50,
+            "description": "Throws 2 big bombs 3 squares",
+            "element": "",
+            "id": 23,
+            "memory": 24,
+            "name": "DublBomb"
+        }, {
+            "codes": ["E", "I", "N", "P", "W"],
+            "damage": 50,
+            "description": "Throws 3 big bombs 3 squares",
+            "element": "",
+            "id": 24,
+            "memory": 36,
+            "name": "TrplBomb"
+        }, {
+            "codes": ["A", "D", "F", "L", "P", "*"],
+            "damage": 160,
+            "description": "Breaks 3rd panel ahead",
+            "element": "",
+            "id": 25,
+            "memory": 33,
+            "name": "CannBall"
+        }, {
+            "codes": ["F", "I", "M", "Q", "S", "*"],
+            "damage": 120,
+            "description": "Freezes 3rd sqr. ahead",
+            "element": "",
+            "id": 26,
+            "memory": 18,
+            "name": "IceBall"
+        }, {
+            "codes": ["B", "C", "H", "N", "W", "*"],
+            "damage": 140,
+            "description": "Shoot lava 3rd sq. ahead",
+            "element": "",
+            "id": 27,
+            "memory": 20,
+            "name": "LavaBall"
+        }, {
+            "codes": ["F", "L", "N", "P", "Z"],
+            "damage": 120,
+            "description": "Firebomb hits 3rd sq ahead!",
+            "element": "",
+            "id": 28,
+            "memory": 60,
+            "name": "BlkBomb1"
+        }, {
+            "codes": ["D", "I", "K", "Q", "S"],
+            "damage": 170,
+            "description": "Fire bomb hits 3rd sq ahead!",
+            "element": "",
+            "id": 29,
+            "memory": 70,
+            "name": "BlkBomb2"
+        }, {
+            "codes": ["C", "G", "L", "U", "Y"],
+            "damage": 220,
+            "description": "Fire bomb hits 3rd sq ahead!",
+            "element": "",
+            "id": 30,
+            "memory": 80,
+            "name": "BlkBomb3"
+        }, {
+            "codes": ["E", "H", "L", "S", "Y"],
+            "damage": 80,
+            "description": "Cuts enmy in front! Range: 1",
+            "element": "",
+            "id": 31,
+            "memory": 10,
+            "name": "Sword"
+        }, {
+            "codes": ["C", "E", "L", "Q", "Y"],
+            "damage": 80,
+            "description": "Cuts enmy in front! Range: 3",
+            "element": "",
+            "id": 32,
+            "memory": 16,
+            "name": "WideSwrd"
+        }, {
+            "codes": ["E", "I", "L", "R", "Y"],
+            "damage": 80,
+            "description": "Cuts enmy in front! Range: 2",
+            "element": "",
+            "id": 33,
+            "memory": 24,
+            "name": "LongSwrd"
+        }, {
+            "codes": ["F", "N", "P", "R", "U"],
+            "damage": 130,
+            "description": "Fire: Cuts fwd 3 squares",
+            "element": "",
+            "id": 34,
+            "memory": 20,
+            "name": "FireSwrd"
+        }, {
+            "codes": ["A", "H", "N", "P", "T"],
+            "damage": 150,
+            "description": "Water: Cuts fwd 3 squares",
+            "element": "",
+            "id": 35,
+            "memory": 25,
+            "name": "AquaSwrd"
+        }, {
+            "codes": ["E", "K", "N", "P", "V"],
+            "damage": 130,
+            "description": "Elec: Cuts fwd 3 squares",
+            "element": "",
+            "id": 36,
+            "memory": 23,
+            "name": "ElecSwrd"
+        }, {
+            "codes": ["B", "L", "N", "P", "W"],
+            "damage": 140,
+            "description": "Wood: Cuts fwd 3 squares",
+            "element": "",
+            "id": 37,
+            "memory": 18,
+            "name": "BambSwrd"
+        }, {
+            "codes": ["B", "F", "R", "V", "Z"],
+            "description": "Cust Gauge= Atk Str",
+            "element": "",
+            "id": 38,
+            "memory": 21,
+            "name": "CustSwrd"
+        }, {
+            "codes": ["B", "C", "D", "E", "F"],
+            "damage": 160,
+            "description": "A magical shifting sword",
+            "element": "",
+            "id": 39,
+            "memory": 68,
+            "name": "VarSwrd"
+        }, {
+            "codes": ["C", "E", "H", "J", "R", "*"],
+            "damage": 100,
+            "description": "Wide swrd with air attack!",
+            "element": "",
+            "id": 40,
+            "memory": 30,
+            "name": "AirSwrd"
+        }, {
+            "codes": ["L", "M", "N", "O", "P"],
+            "damage": 130,
+            "description": "2 steps, then uses wide swrd",
+            "element": "",
+            "id": 41,
+            "memory": 43,
+            "name": "StepSwrd"
+        }, {
+            "codes": ["P", "Q", "R", "S", "T"],
+            "damage": 130,
+            "description": "2 steps, then uses cross atk",
+            "element": "",
+            "id": 42,
+            "memory": 74,
+            "name": "StepCros"
+        }, {
+            "codes": ["B", "D", "G", "R", "S"],
+            "damage": 240,
+            "description": "Cut while A Button is held!",
+            "element": "",
+            "id": 43,
+            "memory": 12,
+            "name": "Slasher"
+        }, {
+            "codes": ["D", "H", "J", "L", "R"],
+            "damage": 60,
+            "description": "Shock through enemies",
+            "element": "",
+            "id": 44,
+            "memory": 10,
+            "name": "ShockWav"
+        }, {
+            "codes": ["G", "I", "M", "S", "W"],
+            "damage": 80,
+            "description": "Shock through enemies",
+            "element": "",
+            "id": 45,
+            "memory": 26,
+            "name": "SonicWav"
+        }, {
+            "codes": ["E", "N", "Q", "T", "V"],
+            "damage": 100,
+            "description": "Shock through enemies",
+            "element": "",
+            "id": 46,
+            "memory": 42,
+            "name": "DynaWave"
+        }, {
+            "codes": ["E", "J", "M", "P", "Y"],
+            "damage": 190,
+            "description": "Shck wave cracks panels",
+            "element": "",
+            "id": 47,
+            "memory": 82,
+            "name": "BigWave"
+        }, {
+            "codes": ["B", "C", "D", "E", "F"],
+            "damage": 80,
+            "description": "Punch pushes 1 square",
+            "element": "",
+            "id": 48,
+            "memory": 14,
+            "name": "GutPunch"
+        }, {
+            "codes": ["O", "P", "Q", "R", "S"],
+            "damage": 100,
+            "description": "Punch 2 square range",
+            "element": "",
+            "id": 49,
+            "memory": 30,
+            "name": "GutStrgt"
+        }, {
+            "codes": ["G", "H", "I", "J", "K"],
+            "damage": 160,
+            "description": "Punch pushes 1 square",
+            "element": "",
+            "id": 50,
+            "memory": 50,
+            "name": "GutImpct"
+        }, {
+            "codes": ["C", "D", "G", "J", "Z", "*"],
+            "damage": 90,
+            "description": "Dash through enemies!",
+            "element": "",
+            "id": 51,
+            "memory": 11,
+            "name": "DashAtk"
+        }, {
+            "codes": ["B", "F", "Q", "S", "W"],
+            "damage": 130,
+            "description": "Envelops you in flame!",
+            "element": "",
+            "id": 52,
+            "memory": 15,
+            "name": "Burner"
+        }, {
+            "codes": ["B", "I", "L", "S", "Z"],
+            "damage": 180,
+            "description": "Chrge atk pierces enemies",
+            "element": "",
+            "id": 53,
+            "memory": 44,
+            "name": "Condor"
+        }, {
+            "codes": ["A", "F", "L", "R", "S"],
+            "damage": 150,
+            "description": "Fire atk in cross shape!",
+            "element": "",
+            "id": 54,
+            "memory": 42,
+            "name": "Burning"
+        }, {
+            "codes": ["A", "M", "P", "Q", "S", "*"],
+            "damage": 20,
+            "description": "Pralyzing electric ring atk!",
+            "element": "",
+            "id": 55,
+            "memory": 8,
+            "name": "ZapRing1"
+        }, {
+            "codes": ["B", "G", "N", "R", "W"],
+            "damage": 40,
+            "description": "Pralyzing electric ring atk!",
+            "element": "",
+            "id": 56,
+            "memory": 18,
+            "name": "ZapRing2"
+        }, {
+            "codes": ["C", "E", "O", "T", "Z"],
+            "damage": 60,
+            "description": "Pralyzing electric ring atk!",
+            "element": "",
+            "id": 57,
+            "memory": 28,
+            "name": "ZapRing3"
+        }, {
+            "codes": ["A", "K", "M", "Q", "W", "*"],
+            "damage": 80,
+            "description": "Creates a 2 sq wide ice wave!",
+            "element": "",
+            "id": 58,
+            "memory": 14,
+            "name": "IceWave1"
+        }, {
+            "codes": ["D", "H", "L", "P", "R", "*"],
+            "damage": 100,
+            "description": "Creates a 2 sq wide ice wave!",
+            "element": "",
+            "id": 59,
+            "memory": 22,
+            "name": "IceWave2"
+        }, {
+            "codes": ["C", "D", "J", "R", "V"],
+            "damage": 140,
+            "description": "Creates a 2 sq wide ice wave!",
+            "element": "",
+            "id": 60,
+            "memory": 30,
+            "name": "IceWave3"
+        }, {
+            "codes": ["C", "D", "E", "F", "G", "*"],
+            "damage": 40,
+            "description": "3-square yo-yo attack!",
+            "element": "",
+            "id": 61,
+            "memory": 72,
+            "name": "Yo-Yo1"
+        }, {
+            "codes": ["H", "I", "J", "K", "L"],
+            "damage": 50,
+            "description": "3-square yo-yo attack!",
+            "element": "",
+            "id": 62,
+            "memory": 80,
+            "name": "Yo-Yo2"
+        }, {
+            "codes": ["M", "N", "O", "P", "Q"],
+            "damage": 60,
+            "description": "3-square yo-yo attack!",
+            "element": "",
+            "id": 63,
+            "memory": 88,
+            "name": "Yo-Yo3"
+        }, {
+            "codes": ["A", "F", "H", "O", "S"],
+            "damage": 50,
+            "description": "Creates 3 whrlwinds",
+            "element": "",
+            "id": 64,
+            "memory": 26,
+            "name": "AirStrm1"
+        }, {
+            "codes": ["C", "G", "H", "M", "W"],
+            "damage": 60,
+            "description": "Creates 3 whrlwinds",
+            "element": "",
+            "id": 65,
+            "memory": 35,
+            "name": "AirStrm2"
+        }, {
+            "codes": ["A", "G", "I", "N", "V"],
+            "damage": 70,
+            "description": "Creates 3 whrlwinds",
+            "element": "",
+            "id": 66,
+            "memory": 44,
+            "name": "AirStrm3"
+        }, {
+            "codes": ["B", "E", "M", "Q", "T"],
+            "damage": 100,
+            "description": "Bee fly diagonal paths",
+            "element": "",
+            "id": 67,
+            "memory": 40,
+            "name": "Arrow1"
+        }, {
+            "codes": ["F", "R", "S", "U", "Z"],
+            "damage": 130,
+            "description": "Bee fly diagonal paths",
+            "element": "",
+            "id": 68,
+            "memory": 60,
+            "name": "Arrow2"
+        }, {
+            "codes": ["A", "H", "J", "N", "P"],
+            "damage": 160,
+            "description": "Bee fly diagonal paths",
+            "element": "",
+            "id": 69,
+            "memory": 80,
+            "name": "Arrow3"
+        }, {
+            "codes": ["A", "C", "F", "H", "J"],
+            "damage": 80,
+            "description": "Crawling rat, turns once",
+            "element": "",
+            "id": 70,
+            "memory": 14,
+            "name": "Ratton1"
+        }, {
+            "codes": ["A", "C", "F", "N", "O"],
+            "damage": 100,
+            "description": "Crawling rat, turns once",
+            "element": "",
+            "id": 71,
+            "memory": 24,
+            "name": "Ratton2"
+        }, {
+            "codes": ["A", "C", "F", "R", "S"],
+            "damage": 120,
+            "description": "Crawling rat, turns once",
+            "element": "",
+            "id": 72,
+            "memory": 34,
+            "name": "Ratton3"
+        }, {
+            "codes": ["B", "F", "H", "M", "Y"],
+            "damage": 230,
+            "description": "Activates when hit w/ fire!",
+            "element": "",
+            "id": 73,
+            "memory": 35,
+            "name": "FireRatn"
+        }, {
+            "codes": ["E", "I", "L", "S", "T"],
+            "damage": 80,
+            "description": "Creates a wave that moves 3 sq",
+            "element": "",
+            "id": 74,
+            "memory": 60,
+            "name": "Wave"
+        }, {
+            "codes": ["B", "F", "J", "R", "U"],
+            "damage": 90,
+            "description": "Creates a 3 sq wave of lava",
+            "element": "",
+            "id": 75,
+            "memory": 72,
+            "name": "RedWave"
+        }, {
+            "codes": ["D", "G", "M", "V", "Z"],
+            "damage": 100,
+            "description": "Mud wave advances 3 squares",
+            "element": "",
+            "id": 76,
+            "memory": 84,
+            "name": "MudWave"
+        }, {
+            "codes": ["C", "L", "R", "T", "U"],
+            "damage": 20,
+            "description": "An 8-hit tornado 2 sq ahead",
+            "element": "",
+            "id": 77,
+            "memory": 18,
+            "name": "Tornado"
+        }, {
+            "codes": ["B", "D", "I", "S", "Z", "*"],
+            "damage": 80,
+            "description": "Dangerous powder on all grass",
+            "element": "",
+            "id": 78,
+            "memory": 22,
+            "name": "Spice1"
+        }, {
+            "codes": ["C", "F", "I", "K", "R"],
+            "damage": 110,
+            "description": "Dangerous powder on all grass",
+            "element": "",
+            "id": 79,
+            "memory": 34,
+            "name": "Spice2"
+        }, {
+            "codes": ["D", "F", "J", "O", "Q"],
+            "damage": 140,
+            "description": "Dangerous powder on all grass",
+            "element": "",
+            "id": 80,
+            "memory": 46,
+            "name": "Spice3"
+        }, {
+            "codes": ["E", "G", "R", "S", "U"],
+            "damage": 90,
+            "description": "Vertical shaking 3 sq ahead",
+            "element": "",
+            "id": 81,
+            "memory": 34,
+            "name": "Shake1"
+        }, {
+            "codes": ["B", "F", "I", "L", "Q"],
+            "damage": 110,
+            "description": "Vertical shaking 3 sq ahead",
+            "element": "",
+            "id": 82,
+            "memory": 40,
+            "name": "Shake2"
+        }, {
+            "codes": ["D", "M", "R", "T", "Z"],
+            "damage": 140,
+            "description": "Vertical shaking 3 sq ahead",
+            "element": "",
+            "id": 83,
+            "memory": 50,
+            "name": "Shake3"
+        }, {
+            "codes": ["C", "F", "G", "T", "W", "Z"],
+            "damage": 200,
+            "description": "Fires if something behind",
+            "element": "",
+            "id": 84,
+            "memory": 66,
+            "name": "NoBeam1"
+        }, {
+            "codes": ["E", "I", "S", "U", "Y"],
+            "damage": 260,
+            "description": "Fires if something behind",
+            "element": "",
+            "id": 85,
+            "memory": 77,
+            "name": "NoBeam2"
+        }, {
+            "codes": ["H", "M", "V", "W", "Z"],
+            "damage": 300,
+            "description": "Fires if something behind",
+            "element": "",
+            "id": 86,
+            "memory": 88,
+            "name": "NoBeam3"
+        }, {
+            "codes": ["B", "G", "L", "P", "T", "*"],
+            "damage": 100,
+            "description": "Hammer smashes front!",
+            "element": "",
+            "id": 87,
+            "memory": 16,
+            "name": "Hammer"
+        }, {
+            "codes": ["B", "C", "L", "S", "W"],
+            "damage": 200,
+            "description": "Geyser 3 squares forward",
+            "element": "",
+            "id": 88,
+            "memory": 22,
+            "name": "Geyser"
+        }, {
+            "codes": ["D", "G", "J", "M", "O", "*"],
+            "damage": 50,
+            "description": "Entwines adjacent enemies!",
+            "element": "",
+            "id": 89,
+            "memory": 45,
+            "name": "Rope1"
+        }, {
+            "codes": ["E", "G", "O", "T", "U"],
+            "damage": 70,
+            "description": "Entwines adjacent enemies!",
+            "element": "",
+            "id": 90,
+            "memory": 55,
+            "name": "Rope2"
+        }, {
+            "codes": ["H", "I", "T", "U", "V"],
+            "damage": 90,
+            "description": "Entwines adjacent enemies!",
+            "element": "",
+            "id": 91,
+            "memory": 65,
+            "name": "Rope3"
+        }, {
+            "codes": ["F", "H", "J", "M", "T", "*"],
+            "damage": 60,
+            "description": "Boomerang encircles field",
+            "element": "",
+            "id": 92,
+            "memory": 15,
+            "name": "Boomer1"
+        }, {
+            "codes": ["E", "I", "K", "N", "V", "*"],
+            "damage": 80,
+            "description": "Boomerang encircles field",
+            "element": "",
+            "id": 93,
+            "memory": 22,
+            "name": "Boomer2"
+        }, {
+            "codes": ["L", "O", "P", "U", "Z"],
+            "damage": 100,
+            "description": "Boomerang encircles field",
+            "element": "",
+            "id": 94,
+            "memory": 30,
+            "name": "Boomer3"
+        }, {
+            "codes": ["A", "F", "N", "Q", "V", "*"],
+            "description": "Poison area w/ A Button!",
+            "element": "",
+            "id": 95,
+            "memory": 30,
+            "name": "PoisMask"
+        }, {
+            "codes": ["A", "N", "Q", "V", "W", "*"],
+            "description": "Spread poison w/ A Button!",
+            "element": "",
+            "id": 96,
+            "memory": 38,
+            "name": "PoisFace"
+        }, {
+            "codes": ["D", "H", "J", "O", "P", "*"],
+            "damage": 100,
+            "description": "Paralyzes enemy w/ erthquake",
+            "element": "",
+            "id": 97,
+            "memory": 23,
+            "name": "RockArm1"
+        }, {
+            "codes": ["G", "M", "P", "S", "V", "*"],
+            "damage": 150,
+            "description": "Paralyzes enemy w/ erthquake",
+            "element": "",
+            "id": 98,
+            "memory": 35,
+            "name": "RockArm2"
+        }, {
+            "codes": ["C", "I", "L", "T", "Z"],
+            "damage": 200,
+            "description": "Paralyzes enemy w/ erthquake",
+            "element": "",
+            "id": 99,
+            "memory": 47,
+            "name": "RockArm3"
+        }, {
+            "codes": ["A", "C", "H", "L", "P", "*"],
+            "damage": 160,
+            "description": "Guard, and bite into the enemy",
+            "element": "",
+            "id": 100,
+            "memory": 25,
+            "name": "CrsShld1"
+        }, {
+            "codes": ["B", "C", "L", "S", "T"],
+            "damage": 210,
+            "description": "Guard, and bite into the enemy",
+            "element": "",
+            "id": 101,
+            "memory": 33,
+            "name": "CrsShld2"
+        }, {
+            "codes": ["C", "E", "L", "N", "R"],
+            "damage": 260,
+            "description": "Guard, and bite into the enemy",
+            "element": "",
+            "id": 102,
+            "memory": 41,
+            "name": "CrsShld3"
+        }, {
+            "codes": ["A", "C", "H", "T", "V"],
+            "damage": 120,
+            "description": "Cursor destroys panel!",
+            "element": "",
+            "id": 103,
+            "memory": 35,
+            "name": "Magnum1"
+        }, {
+            "codes": ["B", "G", "N", "O", "Z"],
+            "damage": 150,
+            "description": "Cursor destroys panel!",
+            "element": "",
+            "id": 104,
+            "memory": 55,
+            "name": "Magnum2"
+        }, {
+            "codes": ["D", "F", "I", "S", "W"],
+            "damage": 180,
+            "description": "Cursor destroys panel!",
+            "element": "",
+            "id": 105,
+            "memory": 75,
+            "name": "Magnum3"
+        }, {
+            "codes": ["B", "D", "J", "R", "T"],
+            "damage": 30,
+            "description": "Launches electric attack",
+            "element": "",
+            "id": 106,
+            "memory": 14,
+            "name": "Plasma1"
+        }, {
+            "codes": ["A", "G", "K", "M", "Q"],
+            "damage": 60,
+            "description": "Launches electric attack",
+            "element": "",
+            "id": 107,
+            "memory": 26,
+            "name": "Plasma2"
+        }, {
+            "codes": ["F", "I", "N", "P", "S"],
+            "damage": 90,
+            "description": "Launches electric attack",
+            "element": "",
+            "id": 108,
+            "memory": 34,
+            "name": "Plasma3"
+        }, {
+            "codes": ["E", "I", "S", "V", "Z"],
+            "damage": 100,
+            "description": "Meteors smash enemies!",
+            "element": "",
+            "id": 109,
+            "memory": 28,
+            "name": "RndmMetr"
+        }, {
+            "codes": ["C", "H", "J", "N", "Q"],
+            "damage": 100,
+            "description": "Meteors smash into sq",
+            "element": "",
+            "id": 110,
+            "memory": 48,
+            "name": "HoleMetr"
+        }, {
+            "codes": ["A", "D", "F", "S", "Y"],
+            "damage": 100,
+            "description": "Meteors shoot out forward",
+            "element": "",
+            "id": 111,
+            "memory": 38,
+            "name": "ShotMetr"
+        }, {
+            "codes": ["I", "J", "M", "R", "S"],
+            "damage": 30,
+            "description": "Advance w/ A, stop to attack",
+            "element": "",
+            "id": 112,
+            "memory": 32,
+            "name": "Needler1"
+        }, {
+            "codes": ["F", "H", "M", "T", "V"],
+            "damage": 40,
+            "description": "Advance w/ A, stop to attack",
+            "element": "",
+            "id": 113,
+            "memory": 52,
+            "name": "Needler2"
+        }, {
+            "codes": ["D", "L", "O", "U", "Z"],
+            "damage": 50,
+            "description": "Advance w/ A, stop to attack",
+            "element": "",
+            "id": 114,
+            "memory": 72,
+            "name": "Needler3"
+        }, {
+            "codes": ["G", "H", "M", "O", "V"],
+            "damage": 100,
+            "description": "Creates a totem to blow fire",
+            "element": "",
+            "id": 115,
+            "memory": 29,
+            "name": "Totem1"
+        }, {
+            "codes": ["A", "C", "E", "T", "Z"],
+            "damage": 140,
+            "description": "Creates a totem to blow fire",
+            "element": "",
+            "id": 116,
+            "memory": 38,
+            "name": "Totem2"
+        }, {
+            "codes": ["D", "I", "K", "N", "Q"],
+            "damage": 180,
+            "description": "Creates a totem to blow fire",
+            "element": "",
+            "id": 117,
+            "memory": 47,
+            "name": "Totem3"
+        }, {
+            "codes": ["C", "K", "L", "O", "P"],
+            "damage": 100,
+            "description": "Sensor to watch sq ahead",
+            "element": "",
+            "id": 118,
+            "memory": 62,
+            "name": "Sensor1"
+        }, {
+            "codes": ["A", "G", "H", "N", "S"],
+            "damage": 130,
+            "description": "Watch sq ahead or diagonal",
+            "element": "",
+            "id": 119,
+            "memory": 70,
+            "name": "Sensor2"
+        }, {
+            "codes": ["B", "E", "J", "O", "P"],
+            "damage": 130,
+            "description": "Watch sq ahead or diagonal",
+            "element": "",
+            "id": 120,
+            "memory": 72,
+            "name": "Sensor3"
+        }, {
+            "codes": ["B", "C", "D", "K", "Y"],
+            "damage": 90,
+            "description": "Gel atk steals a panel!",
+            "element": "",
+            "id": 121,
+            "memory": 18,
+            "name": "MetaGel1"
+        }, {
+            "codes": ["E", "F", "G", "P", "S"],
+            "damage": 130,
+            "description": "Gel atk steals a panel!",
+            "element": "",
+            "id": 122,
+            "memory": 28,
+            "name": "MetaGel2"
+        }, {
+            "codes": ["G", "H", "S", "T", "U"],
+            "damage": 170,
+            "description": "Gel atk steals a panel!",
+            "element": "",
+            "id": 123,
+            "memory": 38,
+            "name": "MetaGel3"
+        }, {
+            "codes": ["B", "E", "N", "R", "Y"],
+            "damage": 90,
+            "description": "Attack by pressing A Button",
+            "element": "",
+            "id": 124,
+            "memory": 44,
+            "name": "Pawn"
+        }, {
+            "codes": ["C", "H", "M", "U", "V"],
+            "damage": 150,
+            "description": "Jumps fwd and attacks",
+            "element": "",
+            "id": 125,
+            "memory": 64,
+            "name": "Knight"
+        }, {
+            "codes": ["D", "F", "N", "Q", "U", "*"],
+            "description": "Protects you from attacks",
+            "element": "",
+            "id": 126,
+            "memory": 30,
+            "name": "Rook"
+        }, {
+            "codes": ["A", "C", "E", "T", "Z", "*"],
+            "damage": 10,
+            "description": "Powers up when ally is hit",
+            "element": "",
+            "id": 127,
+            "memory": 16,
+            "name": "Team1"
+        }, {
+            "codes": ["D", "L", "P", "S", "Z", "*"],
+            "description": "Ally's HP recovered if hurt",
+            "element": "",
+            "id": 128,
+            "memory": 20,
+            "name": "Team2"
+        }, {
+            "codes": ["J", "K", "L", "M", "N"],
+            "damage": 150,
+            "description": "An area-wide time bomb",
+            "element": "",
+            "id": 129,
+            "memory": 32,
+            "name": "TimeBomb"
+        }, {
+            "codes": ["A", "D", "L", "R", "S", "*"],
+            "damage": 300,
+            "description": "Places a mine in enmy area",
+            "element": "",
+            "id": 130,
+            "memory": 16,
+            "name": "Mine"
+        }, {
+            "codes": ["D", "E", "H", "R", "Z"],
+            "damage": 130,
+            "description": "Lances through back line",
+            "element": "",
+            "id": 131,
+            "memory": 46,
+            "name": "Lance"
+        }, {
+            "codes": ["D", "E", "I", "R", "Y"],
+            "damage": 40,
+            "description": "Snake from hole in area",
+            "element": "",
+            "id": 132,
+            "memory": 20,
+            "name": "Snake"
+        }, {
+            "codes": ["*"],
+            "description": "Repels enemy's attack",
+            "element": "",
+            "id": 133,
+            "memory": 5,
+            "name": "Guard"
+        }, {
+            "codes": ["A", "B", "D", "L", "S", "*"],
+            "description": "Destroys 1 panel in front",
+            "element": "",
+            "id": 134,
+            "memory": 4,
+            "name": "PanlOut1"
+        }, {
+            "codes": ["C", "E", "N", "R", "Y", "*"],
+            "description": "Destroys 3 panels in front",
+            "element": "",
+            "id": 135,
+            "memory": 7,
+            "name": "PanlOut3"
+        }, {
+            "codes": ["A", "H", "L", "S", "Y", "*"],
+            "description": "Steals 1 enemy square!",
+            "element": "",
+            "id": 136,
+            "memory": 10,
+            "name": "PanlGrab"
+        }, {
+            "codes": ["E", "L", "R", "S", "Y", "*"],
+            "description": "Steals left edge from enmy",
+            "element": "",
+            "id": 137,
+            "memory": 15,
+            "name": "AreaGrab"
+        }, {
+            "codes": ["A", "E", "I", "K", "N"],
+            "damage": 40,
+            "description": "Retaliate stolen panels!",
+            "element": "",
+            "id": 138,
+            "memory": 10,
+            "name": "GrabBack"
+        }, {
+            "codes": ["C", "G", "P", "R", "Y"],
+            "damage": 80,
+            "description": "Retaliate stolen panels!",
+            "element": "",
+            "id": 139,
+            "memory": 30,
+            "name": "GrabRvng"
+        }, {
+            "codes": ["A", "C", "E", "H", "R", "*"],
+            "description": "Places a rock cube in front",
+            "element": "",
+            "id": 140,
+            "memory": 9,
+            "name": "RockCube"
+        }, {
+            "codes": ["H", "J", "K", "Q", "W"],
+            "description": "Prism fires randomly",
+            "element": "",
+            "id": 141,
+            "memory": 60,
+            "name": "Prism"
+        }, {
+            "codes": ["A", "E", "H", "O", "S", "*"],
+            "description": "WindBox blows at enmy area",
+            "element": "",
+            "id": 142,
+            "memory": 14,
+            "name": "Wind"
+        }, {
+            "codes": ["A", "G", "L", "R", "T", "*"],
+            "description": "Vacuum pulls enemies",
+            "element": "",
+            "id": 143,
+            "memory": 14,
+            "name": "Fan"
+        }, {
+            "codes": ["C", "E", "G", "L", "Y", "*"],
+            "description": "Take no dmg for a while",
+            "element": "",
+            "id": 144,
+            "memory": 32,
+            "name": "Fanfare"
+        }, {
+            "codes": ["D", "F", "N", "T", "Z", "*"],
+            "description": "Confuses enemies w/ music",
+            "element": "",
+            "id": 145,
+            "memory": 38,
+            "name": "Discord"
+        }, {
+            "codes": ["A", "N", "Q", "U", "W", "*"],
+            "description": "Paralyzes enemies w/ music",
+            "element": "",
+            "id": 146,
+            "memory": 42,
+            "name": "Timpani"
+        }, {
+            "codes": ["A", "C", "E", "G", "L", "*"],
+            "description": "Recovers 10HP",
+            "element": "",
+            "id": 147,
+            "memory": 5,
+            "name": "Recov10"
+        }, {
+            "codes": ["B", "D", "F", "H", "M", "*"],
+            "description": "Recovers 30HP",
+            "element": "",
+            "id": 148,
+            "memory": 8,
+            "name": "Recov30"
+        }, {
+            "codes": ["C", "E", "G", "I", "N", "*"],
+            "description": "Recovers 50HP",
+            "element": "",
+            "id": 149,
+            "memory": 14,
+            "name": "Recov50"
+        }, {
+            "codes": ["D", "F", "H", "J", "O", "*"],
+            "description": "Recovers 80HP",
+            "element": "",
+            "id": 150,
+            "memory": 20,
+            "name": "Recov80"
+        }, {
+            "codes": ["O", "Q", "S", "U", "W", "*"],
+            "description": "Recovers 120HP",
+            "element": "",
+            "id": 151,
+            "memory": 35,
+            "name": "Recov120"
+        }, {
+            "codes": ["N", "P", "R", "T", "V"],
+            "description": "Recovers 150HP",
+            "element": "",
+            "id": 152,
+            "memory": 50,
+            "name": "Recov150"
+        }, {
+            "codes": ["M", "N", "U", "V", "W"],
+            "description": "Recovers 200HP",
+            "element": "",
+            "id": 153,
+            "memory": 65,
+            "name": "Recov200"
+        }, {
+            "codes": ["O", "R", "V", "W", "Z"],
+            "description": "Recovers 300HP",
+            "element": "",
+            "id": 154,
+            "memory": 80,
+            "name": "Recov300"
+        }, {
+            "codes": ["A", "C", "D", "F", "S", "*"],
+            "description": "Fix your area's panels",
+            "element": "",
+            "id": 155,
+            "memory": 8,
+            "name": "Repair"
+        }, {
+            "codes": ["A", "C", "R", "S", "Z", "*"],
+            "description": "CustGauge slow down in battle",
+            "element": "",
+            "id": 156,
+            "memory": 20,
+            "name": "SloGauge"
+        }, {
+            "codes": ["B", "E", "J", "R", "Y"],
+            "description": "CustGauge speeds up in battle",
+            "element": "",
+            "id": 157,
+            "memory": 40,
+            "name": "FstGauge"
+        }, {
+            "codes": ["A", "C", "L", "R", "Z"],
+            "description": "Confuses enemies if you are",
+            "element": "",
+            "id": 158,
+            "memory": 14,
+            "name": "Panic"
+        }, {
+            "codes": ["D", "J", "M", "O", "S", "*"],
+            "description": "Cracks all panels!",
+            "element": "",
+            "id": 159,
+            "memory": 10,
+            "name": "Geddon1"
+        }, {
+            "codes": ["F", "H", "N", "O", "W"],
+            "description": "Breaks all empty squares!",
+            "element": "",
+            "id": 160,
+            "memory": 50,
+            "name": "Geddon2"
+        }, {
+            "codes": ["C", "M", "U", "W", "Y"],
+            "description": "Turns all panels to swamp!",
+            "element": "",
+            "id": 161,
+            "memory": 90,
+            "name": "Geddon3"
+        }, {
+            "codes": ["A", "F", "H", "L", "Y", "*"],
+            "description": "Duplicate damage on 2nd enemy",
+            "element": "",
+            "id": 162,
+            "memory": 18,
+            "name": "CopyDmg"
+        }, {
+            "codes": ["B", "E", "F", "R", "S", "*"],
+            "description": "Invisible for a while",
+            "element": "",
+            "id": 163,
+            "memory": 11,
+            "name": "Invis"
+        }, {
+            "codes": ["H", "J", "N", "Q", "U", "*"],
+            "description": "Only swrd attacks hurt you",
+            "element": "",
+            "id": 164,
+            "memory": 60,
+            "name": "Shadow"
+        }, {
+            "codes": ["A", "D", "H", "J", "O", "*"],
+            "description": "Attacks fr. under ground!",
+            "element": "",
+            "id": 165,
+            "memory": 28,
+            "name": "Mole1"
+        }, {
+            "codes": ["B", "D", "I", "K", "R", "*"],
+            "description": "Attacks fr. under ground!",
+            "element": "",
+            "id": 166,
+            "memory": 35,
+            "name": "Mole2"
+        }, {
+            "codes": ["C", "E", "L", "M", "Q"],
+            "description": "Attacks fr. under ground!",
+            "element": "",
+            "id": 167,
+            "memory": 42,
+            "name": "Mole3"
+        }, {
+            "codes": ["H", "I", "N", "U", "Y", "*"],
+            "description": "Can stand on empty squares",
+            "element": "",
+            "id": 168,
+            "memory": 26,
+            "name": "AirShoes"
+        }, {
+            "codes": ["C", "E", "L", "R", "S", "*"],
+            "description": "Nullifies 10HP of damage!",
+            "element": "",
+            "id": 169,
+            "memory": 7,
+            "name": "Barrier"
+        }, {
+            "codes": ["E", "J", "M", "R", "T", "*"],
+            "description": "Nullifies 100HP of damage!",
+            "element": "",
+            "id": 170,
+            "memory": 25,
+            "name": "Barr100"
+        }, {
+            "codes": ["E", "F", "H", "R", "U"],
+            "description": "Nullifies 200HP of damage!",
+            "element": "",
+            "id": 171,
+            "memory": 50,
+            "name": "Barr200"
+        }, {
+            "codes": ["F", "I", "S", "U", "Y"],
+            "description": "Repels attacks under 100",
+            "element": "",
+            "id": 172,
+            "memory": 55,
+            "name": "Aura"
+        }, {
+            "codes": ["A", "C", "N", "S", "Z"],
+            "description": "Wind removes auras, etc",
+            "element": "",
+            "id": 173,
+            "memory": 43,
+            "name": "NrthWind"
+        }, {
+            "codes": ["E", "L", "M", "O", "T"],
+            "description": "Summons a Mettaur to fight!",
+            "element": "",
+            "id": 174,
+            "memory": 30,
+            "name": "Mettaur"
+        }, {
+            "codes": ["A", "B", "I", "L", "R"],
+            "description": "Summons a Bunny to fight!",
+            "element": "",
+            "id": 175,
+            "memory": 32,
+            "name": "Bunny"
+        }, {
+            "codes": ["A", "E", "G", "R", "U"],
+            "description": "Summons a Spikey to fight!",
+            "element": "",
+            "id": 176,
+            "memory": 34,
+            "name": "Spikey"
+        }, {
+            "codes": ["D", "I", "O", "S", "W"],
+            "description": "Summons a Swordy to fight!",
+            "element": "",
+            "id": 177,
+            "memory": 30,
+            "name": "Swordy"
+        }, {
+            "codes": ["E", "J", "L", "R", "Y"],
+            "description": "Summons a Jelly to fight!",
+            "element": "",
+            "id": 178,
+            "memory": 46,
+            "name": "Jelly"
+        }, {
+            "codes": ["C", "H", "M", "S", "Y"],
+            "description": "Summons a Mushy to fight!",
+            "element": "",
+            "id": 179,
+            "memory": 38,
+            "name": "Mushy"
+        }, {
+            "codes": ["G", "M", "O", "R", "U"],
+            "description": "Summons a Momogra to fight!",
+            "element": "",
+            "id": 180,
+            "memory": 38,
+            "name": "Momogra"
+        }, {
+            "codes": ["E", "I", "K", "L", "R"],
+            "description": "Summons a KillerEye to fight!",
+            "element": "",
+            "id": 181,
+            "memory": 50,
+            "name": "KillrEye"
+        }, {
+            "codes": ["A", "D", "E", "M", "R"],
+            "description": "Summons a Scuttlest to fight!",
+            "element": "",
+            "id": 182,
+            "memory": 53,
+            "name": "Scuttlst"
+        }, {
+            "codes": ["A", "B", "S", "T", "Z", "*"],
+            "description": "Open hole to dark world",
+            "element": "",
+            "id": 183,
+            "memory": 55,
+            "name": "Hole"
+        }, {
+            "codes": ["E", "J", "L", "R", "U", "*"],
+            "description": "Creates a holy pnl in front",
+            "element": "",
+            "id": 184,
+            "memory": 14,
+            "name": "HolyPanl"
+        }, {
+            "codes": ["A", "E", "R", "T", "Y", "*"],
+            "description": "Changes all panls to lava",
+            "element": "",
+            "id": 185,
+            "memory": 22,
+            "name": "LavaStge"
+        }, {
+            "codes": ["C", "G", "M", "Q", "T", "*"],
+            "description": "Changes all panls to ice",
+            "element": "",
+            "id": 186,
+            "memory": 20,
+            "name": "IceStage"
+        }, {
+            "codes": ["E", "J", "R", "W", "Z", "*"],
+            "description": "Changes all panls to grass",
+            "element": "",
+            "id": 187,
+            "memory": 10,
+            "name": "GrassStg"
+        }, {
+            "codes": ["B", "C", "Q", "U", "W"],
+            "description": "Changes all panls to sand",
+            "element": "",
+            "id": 188,
+            "memory": 18,
+            "name": "SandStge"
+        }, {
+            "codes": ["D", "G", "M", "O", "S"],
+            "description": "Changes all panls to metal",
+            "element": "",
+            "id": 189,
+            "memory": 18,
+            "name": "MetlStge"
+        }, {
+            "codes": ["A", "C", "E", "L", "S"],
+            "description": "Change own panls to holy",
+            "element": "",
+            "id": 190,
+            "memory": 54,
+            "name": "Snctuary"
+        }, {
+            "codes": ["C", "F", "H", "M", "S"],
+            "damage": 100,
+            "description": "Sets trap & throws stars!",
+            "element": "",
+            "id": 191,
+            "memory": 45,
+            "name": "AntiDmg"
+        }, {
+            "codes": ["B", "K", "R", "U", "Y"],
+            "damage": 100,
+            "description": "Retaliate for sword damage",
+            "element": "",
+            "id": 192,
+            "memory": 68,
+            "name": "AntiSwrd"
+        }, {
+            "codes": ["A", "M", "N", "V", "W"],
+            "description": "Takes the enemy's Navi away",
+            "element": "",
+            "id": 193,
+            "memory": 60,
+            "name": "AntiNavi"
+        }, {
+            "codes": ["B", "D", "E", "O", "S"],
+            "description": "Punish recovery of HPs!",
+            "element": "",
+            "id": 194,
+            "memory": 73,
+            "name": "AntiRecv"
+        }, {
+            "codes": ["*"],
+            "description": "+10 for selected atk chip",
+            "element": "",
+            "id": 195,
+            "memory": 4,
+            "name": "Atk+10"
+        }, {
+            "codes": ["*"],
+            "description": "+30 for Fire atk chip",
+            "element": "",
+            "id": 196,
+            "memory": 20,
+            "name": "Fire+30"
+        }, {
+            "codes": ["*"],
+            "description": "+30 for Aqua atk chip",
+            "element": "",
+            "id": 197,
+            "memory": 21,
+            "name": "Aqua+30"
+        }, {
+            "codes": ["*"],
+            "description": "+30 for Elec atk chip",
+            "element": "",
+            "id": 198,
+            "memory": 23,
+            "name": "Elec+30"
+        }, {
+            "codes": ["*"],
+            "description": "+30 for Wood atk chip",
+            "element": "",
+            "id": 199,
+            "memory": 26,
+            "name": "Wood+30"
+        }, {
+            "codes": ["*"],
+            "description": "+20 for selected Navi chip",
+            "element": "",
+            "id": 200,
+            "memory": 34,
+            "name": "Navi+20"
+        }]
+    }
+}

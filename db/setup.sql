@@ -6,7 +6,7 @@ CREATE TABLE prj2_chip_element (
 CREATE TABLE prj2_chip (
       id            SERIAL PRIMARY KEY
     , name          VARCHAR(8) UNIQUE NOT NULL
-    , description   VARCHAR(27) NOT NULL
+    , description   VARCHAR(32) NOT NULL
     , damage        INT NOT NULL
     , element       INT REFERENCES prj2_chip_element (id) NOT NULL
     , memory        INT NOT NULL
@@ -16,7 +16,8 @@ CREATE TABLE prj2_chip (
 CREATE TYPE prj2_chip_code AS ENUM (
     'A', 'B', 'C', 'D', 'E', 'F', 'G',
     'H', 'I', 'J', 'K', 'L', 'M', 'N',
-    'O', 'P', 'Q', 'R', 'S', 'T', 'W'
+    'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+    'V', 'W', 'X', 'Y', 'Z'
 );
 
 CREATE TABLE prj2_chip_code_combo (
