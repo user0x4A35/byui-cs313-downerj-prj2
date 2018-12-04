@@ -5,7 +5,7 @@ $(document).ready(() => {
         success: (data, textStatus, jqXHR) => {
             let tbody = $('#tbl-chip-list > tbody:last-child')[0];
 
-            for (let dataRow of data) {
+            for (let dataRow in data) {
                 let tableRow = tbody.insertRow();
                 for (let key in dataRow) {
                     let value = dataRow[key];
