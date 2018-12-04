@@ -217,7 +217,7 @@ function dbGetChips(response) {
                     + `, array_agg(combo.code) AS codes`
                     + `, chip.imageurl`
                     + `FROM ${TBL_CHIP} AS chip`
-                    + `INNER JOIN ${TBL_CHIP} AS combo`
+                    + `INNER JOIN ${TBL_COMBO} AS combo`
                     + `ON combo.chip = chip.id`
                     + `GROUP BY chip.id`
                     + `ORDER BY chip.id;`
