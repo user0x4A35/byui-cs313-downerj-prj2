@@ -19,9 +19,9 @@ express()
     .set('view engine', 'ejs')
     // static pages
     .get('/', (req, res) => res.sendFile('login.html'))
-    .get('/account', (req, res) => res.sendFile('account.html'))
-    .get('/viewstats', (req, res) => res.sendFile('viewstats.html'))
-    .get('/viewchips', (req, res) => res.sendFile('viewchips.html'))
+    // .get('/account', (req, res) => res.sendFile('account.html'))
+    // .get('/viewstats', (req, res) => res.sendFile('viewstats.html'))
+    // .get('/viewchips', (req, res) => res.sendFile('public/viewchips.html'))
     // endpoint: chip list
     .put('/chiplist', epChipList.doPut)
     .post('/chiplist', epChipList.doPost)
