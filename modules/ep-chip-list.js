@@ -214,7 +214,7 @@ function dbGetChips(response) {
                     + `, chip.damage`
                     + `, chip.element`
                     + `, chip.memory`
-                    + `, array_agg(combo.code) AS codes`
+                    + `, array_agg(combo.code)`
                     + `, chip.imageurl`
                     + `FROM ${TBL_CHIP} AS chip`
                     + `INNER JOIN ${TBL_COMBO} AS combo`
