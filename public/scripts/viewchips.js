@@ -11,7 +11,7 @@ $(document).ready(() => {
                 for (let key in dataRow) {
                     let value = dataRow[key];
                     let cell = tableRow.insertCell();
-                    cell.innerText = value || 'NULL';
+                    cell.innerText = (value !== null && value !== undefined) ? value : 'Null';
                 } 
             }
         },
