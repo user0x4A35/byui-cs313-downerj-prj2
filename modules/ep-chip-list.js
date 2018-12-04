@@ -4,6 +4,14 @@ let pool;
 module.exports = {
     doGet: (req, res) => {
         touchPool();
+
+        try {
+            dbGetChips(res);
+        } catch (err) {
+            console.error(err);
+            sendError(res, 'Server error');
+            return;
+        }
     },
 
     doPost: (req, res) => {
@@ -68,6 +76,8 @@ function touchPool() {
             connectionString: process.env.DATABASE_URL,
             ssl: true,
         });
+
+        console.log(process.env.DATABASE_URL);
 
         pool.on('error', (err, client) => {
             console.error('Unexpected error on idle client', err);
@@ -177,6 +187,27 @@ function dbInsertChipCodeCombo(comboDataArray) {
         return client.query(QUERY, PARAMS)
         .then((res) => {
             client.release();
+        })
+        .catch((err) => {
+            client.release();
+            console.error(err);
+            throw err;
+        })
+    });
+}
+
+function dbGetChips(response) {
+    return pool
+    .connect()
+    .then((client) => {
+        const QUERY = `SELECT * FROM ${TBL_CHIP} `
+                    + `ORDER BY id`;
+        const PARAMS = [];
+
+        return client.query(QUERY, PARAMS)
+        .then((res) => {
+            client.release();
+            response.end(JSON.stringify(res));
         })
         .catch((err) => {
             client.release();
