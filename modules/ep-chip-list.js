@@ -207,19 +207,19 @@ function dbGetChips(response) {
     return pool
     .connect()
     .then((client) => {
-        const QUERY = `SELECT`
-                    + `  chip.id`
-                    + `, chip.name`
-                    + `, chip.description`
-                    + `, chip.damage`
-                    + `, chip.element`
-                    + `, chip.memory`
-                    + `, array_agg(combo.code)`
-                    + `, chip.imageurl`
-                    + `FROM ${TBL_CHIP} AS chip`
-                    + `INNER JOIN ${TBL_COMBO} AS combo`
-                    + `ON combo.chip = chip.id`
-                    + `GROUP BY chip.id`
+        const QUERY = `SELECT `
+                    + `  chip.id `
+                    + `, chip.name `
+                    + `, chip.description `
+                    + `, chip.damage `
+                    + `, chip.element `
+                    + `, chip.memory `
+                    + `, array_agg(combo.code) AS codes`
+                    + `, chip.imageurl `
+                    + `FROM ${TBL_CHIP} AS chip `
+                    + `INNER JOIN ${TBL_COMBO} AS combo `
+                    + `ON combo.chip = chip.id `
+                    + `GROUP BY chip.id `
                     + `ORDER BY chip.id;`
         const PARAMS = [];
 
