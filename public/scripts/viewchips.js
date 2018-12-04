@@ -5,12 +5,13 @@ $(document).ready(() => {
         success: (data, textStatus, jqXHR) => {
             let tbody = $('#tbl-chip-list > tbody:last-child')[0];
 
-            for (let dataRow in data) {
+            for (let key in data.rows) {
+                let dataRow = data.rows[key];
                 let tableRow = tbody.insertRow();
                 for (let key in dataRow) {
                     let value = dataRow[key];
                     let cell = tableRow.insertCell();
-                    cell.innerText = value;
+                    cell.innerText = value || 'NULL';
                 } 
             }
         },
