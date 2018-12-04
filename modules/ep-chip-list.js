@@ -9,7 +9,7 @@ module.exports = {
             dbGetChips(res);
         } catch (err) {
             console.error(err);
-            sendError(res, 'Server error');
+            sendUserError(res, 'Server error');
             return;
         }
     },
@@ -18,7 +18,7 @@ module.exports = {
         touchPool();
 
         if (!('chips' in req.body)) {
-            sendError(res, 'Missing "chips" argument in body');
+            sendUserError(res, 'Missing "chips" argument in body');
             return;
         }
 
@@ -27,7 +27,7 @@ module.exports = {
             chips = req.body.chips;
         } catch (err) {
             console.error(err);
-            sendError(res, 'Malformed "chips" JSON');
+            sendUserError(res, 'Malformed "chips" JSON');
             return;
         }
 
@@ -60,7 +60,7 @@ module.exports = {
             });
         } catch (err) {
             console.log(err);
-            sendError(res, `Error at "${key}": ${err}`);
+            sendUserError(res, `Error at "${key}": ${err}`);
             return;
         }
     },
@@ -86,11 +86,18 @@ function touchPool() {
     }
 }
 
-function sendError(res, msg) {
+function sendUserError(res, msg) {
     res
     .status(400)
     .end(`${msg}\n`);
 };
+
+function sendJSONData(res, data) {
+    res
+    .status(200)
+    .set('Content-Type', 'application/json')
+    .end(JSON.stringify(data));
+}
 
 function addChips(sectionName, chipList) {
     let promises = [];
@@ -207,7 +214,7 @@ function dbGetChips(response) {
         return client.query(QUERY, PARAMS)
         .then((res) => {
             client.release();
-            response.end(JSON.stringify(res));
+            sendJSONData(response, res);
         })
         .catch((err) => {
             client.release();
