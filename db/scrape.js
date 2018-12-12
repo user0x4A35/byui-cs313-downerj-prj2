@@ -17,10 +17,10 @@ function addChipFromRow(row, chipList, chipType) {
     let description = row.cells.item(6).innerHTML.trim();
 
     switch (chipType) {
-        case 'mega':
+        case 'MEGA':
             id += 300;
             break;
-        case 'giga':
+        case 'GIGA':
             id += 400;
             break;
     }
@@ -52,19 +52,19 @@ function scrape(res) {
         });
         let chipListStandard = {
             chips: {
-                standard: {},
+                STANDARD: {},
             },
         };
 
         let chipListMega = {
             chips: {
-                mega: {},
+                MEGA: {},
             },
         };
 
         let chipListGiga = {
             chips: {
-                giga: {},
+                GIGA: {},
             },
         };
 
@@ -75,14 +75,14 @@ function scrape(res) {
         let tblStandardChips = tables[0];
         rows = tblStandardChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
-            addChipFromRow(rows[r], chipListStandard, 'standard');
+            addChipFromRow(rows[r], chipListStandard, 'STANDARD');
         }
 
         // PASS 2: Mega Chips
         let tblMegaChips = tables[1];
         rows = tblMegaChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
-            addChipFromRow(rows[r], chipListMega, 'mega');
+            addChipFromRow(rows[r], chipListMega, 'MEGA');
         }
 
         // PASS 3: Giga Chips
@@ -92,7 +92,7 @@ function scrape(res) {
             if (r === 17) {
                 continue;
             }
-            addChipFromRow(rows[r], chipListGiga, 'giga');
+            addChipFromRow(rows[r], chipListGiga, 'GIGA');
         }
 
         fs.writeFile('./json/chipsStandard.json', JSON.stringify(chipListStandard), (err) => {

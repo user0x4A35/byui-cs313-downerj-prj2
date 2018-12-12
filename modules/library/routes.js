@@ -36,8 +36,8 @@ module.exports = {
                         case 'giga':
                             let promises = addChips(chipType, chips[chipType]);
 
+                            console.log(`Adding ${promises.length} promises`);
                             for (let promise of promises) {
-                                console.log('Add');
                                 promiseArray.push(promise);
                             }
                             break;
@@ -72,6 +72,8 @@ module.exports = {
 
 function addChips(chipType, chipList) {
     let promises = [];
+
+    console.log(`Adding chip list "${chipType}" of length ${chipList.length}`);
 
     for (let chipID in chipList) {
         let chip = chipList[chipID];
