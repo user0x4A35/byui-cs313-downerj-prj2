@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # METHOD="POST"
 # HEADER0="\"Content-Type: application/json\""
@@ -9,9 +9,11 @@
 
 for f in ./json/chips*.json
 do
-    echo "cURL: $f"
+    echo -ne "\ncURL: $f\n"
     curl -X POST \
         -H "Content-Type: application/json" \
+        -H "Accept: application/json" \
         -d @$f \
         "https://byui-cs313-downerj-prj2.herokuapp.com/library/chiplist"
+    echo -ne "\n"
 done

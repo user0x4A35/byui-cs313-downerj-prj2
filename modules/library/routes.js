@@ -38,6 +38,8 @@ module.exports = {
                     let message = 'POST complete';
                     console.log(message);
                     res.end(message);
+                }).catch((err) => {
+                    console.error(err);
                 });
             } catch (err) {
                 console.log(err);
@@ -103,8 +105,14 @@ function addChips(chipType, chipList) {
                 const PARAMS = [
                     id, code
                 ];
-                promises.push(dbUtil.doDatabase(dbQueries.chipLinksPost, PARAMS));
+                let promise2 = dbUtil.doDatabase(dbQueries.chipLinksPost, PARAMS)
+                .catch((err) => {
+                    console.error(err);
+                });
+                promises.push(promise2);
             }
+        }).catch((err) => {
+            console.error(err);
         });
 
         promises.push(promise);

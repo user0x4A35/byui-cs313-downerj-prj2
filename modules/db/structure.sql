@@ -20,17 +20,17 @@ CREATE TYPE mm_chip_rarity AS ENUM (
 
 CREATE TABLE mm_elements (
     id          SERIAL PRIMARY KEY,
-    name        VARCHAR(8) UNIQUE NOT NULL
+    name        VARCHAR(16) UNIQUE NOT NULL
 );
 
 CREATE TABLE mm_navi_styles (
     id          SERIAL PRIMARY KEY,
-    name        VARCHAR(8) UNIQUE NOT NULL
+    name        VARCHAR(16) UNIQUE NOT NULL
 );
 
 CREATE TABLE mm_chips (
     id          SERIAL PRIMARY KEY,
-    name        VARCHAR(8) UNIQUE NOT NULL,
+    name        VARCHAR(16) UNIQUE NOT NULL,
     damage      uint16 NOT NULL,
     memory      uint16 NOT NULL,
     description VARCHAR(32),
