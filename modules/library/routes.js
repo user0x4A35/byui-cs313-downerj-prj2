@@ -24,17 +24,11 @@ module.exports = {
                 let promiseArray = [];
                 for (chipType in chips) {
                     console.log(chipType);
-                    switch (chipType) {
-                        case 'standard':
-                        case 'mega':
-                        case 'giga':
-                            let promises = addChips(chipType, chips[chipType]);
+                    let promises = addChips(chipType, chips[chipType]);
 
-                            console.log(`Adding ${promises.length} promises`);
-                            for (let promise of promises) {
-                                promiseArray.push(promise);
-                            }
-                            break;
+                    console.log(`Adding ${promises.length} promises`);
+                    for (let promise of promises) {
+                        promiseArray.push(promise);
                     }
                 }
     
