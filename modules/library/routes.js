@@ -105,7 +105,7 @@ function addChips(chipType, chipList) {
         const PARAMS = [
             id, name, damage, memory, description, fileName, rarity, element, chipType
         ];
-        let promise = dbUtils.doDatabase(dbQueries.chipsPost, PARAMS);
+        let promise = dbUtil.doDatabase(dbQueries.chipsPost, PARAMS);
 
         // then: insert chip-code link
         promise.then(() => {
@@ -113,7 +113,7 @@ function addChips(chipType, chipList) {
                 const PARAMS = [
                     id, code
                 ];
-                promises.push(dbUtils.doDatabase(dbQueries.chipLinksPost, PARAMS));
+                promises.push(dbUtil.doDatabase(dbQueries.chipLinksPost, PARAMS));
             }
         });
 
