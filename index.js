@@ -1,42 +1,75 @@
-// external imports
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-// local imports
-const epChipList = require('./modules/ep-chip-list.js');
-const epPlayer = require('./modules/ep-player.js');
-const epAuth = require('./modules/ep-auth.js');
-const epRedir = require('./modules/ep-redir.js');
+const pages = require('./pageRoutes.js');
+const endpoints = require('./endpointRoutes.js');
 
-// constants
 const PORT = process.env.PORT || 5000;
+const app = express();
 
-express()
-    .use(express.static(path.join(__dirname, 'public')))
-    .use(bodyParser.json())
-    .set('views', path.join(__dirname, 'views'))
-    .set('view engine', 'ejs')
-    // static pages
-    .get('/', (req, res) => res.sendFile('login.html'))
-    // .get('/account', (req, res) => res.sendFile('account.html'))
-    // .get('/viewstats', (req, res) => res.sendFile('viewstats.html'))
-    // .get('/viewchips', (req, res) => res.sendFile('public/viewchips.html'))
-    // endpoint: chip list
-    .put('/chiplist', epChipList.doPut)
-    .post('/chiplist', epChipList.doPost)
-    .get('/chiplist', epChipList.doGet)
-    // endpoint: player
-    .put('/player', epPlayer.doPut)
-    .post('/player', epPlayer.doPost)
-    .get('/player', epPlayer.doGet)
-    // endpoint: auth
-    .put('/auth', epAuth.doPut)
-    .post('/auth', epAuth.doPost)
-    .get('/auth', epAuth.doGet)
-    // endpoint: others (404)
-    .use(epRedir.doNotFound)
-    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+/**
+ * BASIC SETUP
+ */
+app
+.use(express.static(path.join(__dirname, 'public')))
+.use(bodyParser.json())
+.set('views', path.join(__dirname, 'views'))
+.set('view engine', 'ejs')
 
-// for reference: render EJS
-// <express()>.get('/', (req, res) => res.render('pages/index'))
+/**
+ * PAGES
+ */
+.get('/', pages.goRoot)
+.get('/player', pages.goPlayer)
+.get('/library', pages.goLibrary)
+
+/**
+ * ENDPOINTS : PLAYER : ACCOUNT
+ */
+.get('/player/account', endpoints.player.account.get)
+.post('/player/account', endpoints.player.account.post)
+.put('/player/account', endpoints.player.account.put)
+.delete('/player/account', endpoints.player.account.delete)
+
+/**
+ * ENDPOINTS : PLAYER : STATS
+ */
+.get('/player/stats', endpoints.player.stats.get)
+.post('/player/stats', endpoints.player.stats.post)
+.put('/player/stats', endpoints.player.stats.put)
+.delete('/player/stats', endpoints.player.stats.delete)
+
+/**
+ * ENDPOINTS : PLAYER : CHIP LIST
+ */
+.get('/player/chiplist', endpoints.player.chiplist.get)
+.post('/player/chiplist', endpoints.player.chiplist.post)
+.put('/player/chiplist', endpoints.player.chiplist.put)
+.delete('/player/chiplist', endpoints.player.chiplist.delete)
+
+/**
+ * ENDPOINTS : LIBRARY : CHIP LIST
+ */
+.get('/library/chiplist', endpoints.library.chiplist.get)
+.post('/library/chiplist', endpoints.library.chiplist.post)
+.put('/library/chiplist', endpoints.library.chiplist.put)
+.delete('/library/chiplist', endpoints.library.chiplist.delete)
+
+/**
+ * ENDPOINTS : LIBRARY : NAVI CUSTOMIZATION
+ */
+.get('/library/navicust', endpoints.library.navicust.get)
+.post('/library/navicust', endpoints.library.navicust.post)
+.put('/library/navicust', endpoints.library.navicust.put)
+.delete('/library/navicust', endpoints.library.navicust.delete)
+
+/**
+ * OTHER REDIRECT / PAGE NOT FOUND
+ */
+.use(pages.doNotFound)
+
+/**
+ * START SERVER
+ */
+.listen(PORT, () => console.log(`Listening on ${ PORT }`));

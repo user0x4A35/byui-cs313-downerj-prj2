@@ -1,6 +1,6 @@
 {
   "name": "byui-cs313-downerj-prj2",
-  "version": "1.1.0",
+  "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "10.x"
@@ -11,9 +11,11 @@
     "test": "node test.js"
   },
   "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "pg": "^7.7.1"
+    "pg": "^7.6.1"
   },
   "devDependencies": {
     "request": "^2.81.0",
@@ -32,6 +34,6 @@
   "bugs": {
     "url": "https://github.com/heroku/node-js-getting-started/issues"
   },
-  "homepage": "https://github.com/user0x4a35/byui-cs313-downerj-prj2#readme",
+  "homepage": "https://ascenderx.github.io",
   "author": "James D. Downer"
 }
