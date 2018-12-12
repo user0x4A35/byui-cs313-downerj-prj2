@@ -17,19 +17,13 @@ module.exports = {
                 return;
             }
     
-            let chips;
-            try {
-                chips = req.body.chips;
-            } catch (err) {
-                console.error(err);
-                httpUtil.sendUserError(res, 'Malformed "chips" JSON');
-                return;
-            }
+            let chips = req.body.chips;
     
             let chipType;
             try {
                 let promiseArray = [];
                 for (chipType in chips) {
+                    console.log(chipType);
                     switch (chipType) {
                         case 'standard':
                         case 'mega':
