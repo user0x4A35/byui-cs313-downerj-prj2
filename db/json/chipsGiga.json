@@ -1,0 +1,226 @@
+{
+    "chips": {
+        "giga": {
+            "401": {
+                "id": 401,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/4/42/MMBN3GChip01W.png/revision/latest?cb=20111118200635",
+                "name": "NaviRcycl",
+                "damage": null,
+                "codes": ["*"],
+                "memory": 50,
+                "description": "Recalls last Navi used",
+                "element": null,
+                "rarity": 0
+            },
+            "402": {
+                "id": 402,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/c/cc/MMBN3GChip02W.png/revision/latest?cb=20111118200825",
+                "name": "Bass",
+                "damage": 90,
+                "codes": ["X"],
+                "memory": 98,
+                "description": "Dark chip Explodes for 3 sq",
+                "element": null,
+                "rarity": 0
+            },
+            "403": {
+                "id": 403,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/b/be/MMBN3GChip03W.png/revision/latest?cb=20111118201307",
+                "name": "Serenade",
+                "damage": 100,
+                "codes": ["S"],
+                "memory": 97,
+                "description": "Dark chip Holy pwr to front",
+                "element": null,
+                "rarity": 0
+            },
+            "404": {
+                "id": 404,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/c/cf/MMBN3GChip04W.png/revision/latest?cb=20111118201622",
+                "name": "Balance",
+                "damage": null,
+                "codes": ["Y"],
+                "memory": 60,
+                "description": "Both HP reduced by half!",
+                "element": null,
+                "rarity": 0
+            },
+            "405": {
+                "id": 405,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/7/70/MMBN3GChip05W.png/revision/latest?cb=20111118202004",
+                "name": "AlphArmΣ",
+                "damage": 50,
+                "codes": ["V"],
+                "memory": 97,
+                "description": "3-stage electric attack!",
+                "element": null,
+                "rarity": 0
+            },
+            "406": {
+                "id": 406,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/0/06/MMBN3GChip06.png/revision/latest?cb=20110728181430",
+                "name": "GutsManV5",
+                "damage": 120,
+                "codes": ["G"],
+                "memory": 79,
+                "description": "Sneaks up to smash panels!",
+                "element": null,
+                "rarity": 0
+            },
+            "407": {
+                "id": 407,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/9/95/MMBN3GChip07.png/revision/latest?cb=20111118202125",
+                "name": "ProtoMnV5",
+                "damage": 240,
+                "codes": ["B"],
+                "memory": 98,
+                "description": "Moves in to slice the enemy",
+                "element": null,
+                "rarity": 0
+            },
+            "408": {
+                "id": 408,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/4/42/MMBN3GChip08.png/revision/latest?cb=20111118202232",
+                "name": "FlashMnV5",
+                "damage": 150,
+                "codes": ["F"],
+                "memory": 89,
+                "description": "Flash atk paralyzes enemy",
+                "element": null,
+                "rarity": 0
+            },
+            "409": {
+                "id": 409,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/7/78/MMBN3GChip09.png/revision/latest?cb=20111118202321",
+                "name": "BeastMnV5",
+                "damage": 80,
+                "codes": ["B"],
+                "memory": 84,
+                "description": "Claw atk 3 squares ahead!",
+                "element": null,
+                "rarity": 0
+            },
+            "410": {
+                "id": 410,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/2/21/MMBN3GChip10.png/revision/latest?cb=20111118202403",
+                "name": "BubblMnV5",
+                "damage": 20,
+                "codes": ["B"],
+                "memory": 86,
+                "description": "Fires several AquaShots",
+                "element": null,
+                "rarity": 0
+            },
+            "411": {
+                "id": 411,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/f/f4/MMBN3GChip11.png/revision/latest?cb=20111118202500",
+                "name": "DesrtMnV5",
+                "damage": 210,
+                "codes": ["D"],
+                "memory": 80,
+                "description": "Launches fists at enemies!",
+                "element": null,
+                "rarity": 0
+            },
+            "412": {
+                "id": 412,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/d/dc/MMBN3GChip12.png/revision/latest?cb=20111118202534",
+                "name": "PlantMnV5",
+                "damage": 60,
+                "codes": ["P"],
+                "memory": 80,
+                "description": "Vines harm all enemies!",
+                "element": null,
+                "rarity": 0
+            },
+            "413": {
+                "id": 413,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/3/34/MMBN3GChip13.png/revision/latest?cb=20111118202623",
+                "name": "FlamManV5",
+                "damage": 240,
+                "codes": ["F"],
+                "memory": 82,
+                "description": "Flames burn all enemies!",
+                "element": null,
+                "rarity": 0
+            },
+            "414": {
+                "id": 414,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/4/49/MMBN3GChip14.png/revision/latest?cb=20111118202701",
+                "name": "DrillMnV5",
+                "damage": 150,
+                "codes": ["D"],
+                "memory": 82,
+                "description": "3 drills fly at enemies!",
+                "element": null,
+                "rarity": 0
+            },
+            "415": {
+                "id": 415,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/e/ec/MMBN3GChip15.png/revision/latest?cb=20111118202746",
+                "name": "MetalMnV5",
+                "damage": 250,
+                "codes": ["M"],
+                "memory": 90,
+                "description": "Iron fist smashes 1 square!",
+                "element": null,
+                "rarity": 0
+            },
+            "416": {
+                "id": 416,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/4/46/MMBN3GChip16.png/revision/latest?cb=20111118202824",
+                "name": "KingManV5",
+                "damage": 280,
+                "codes": ["K"],
+                "memory": 84,
+                "description": "Move up 3 square &amp; 4-way hit",
+                "element": null,
+                "rarity": 0
+            },
+            "417": {
+                "id": 417,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/b/b0/MMBN3GChip17.png/revision/latest?cb=20111118202922",
+                "name": "MistManV5",
+                "damage": 170,
+                "codes": ["M"],
+                "memory": 80,
+                "description": "Appears from mist &amp; attacks",
+                "element": null,
+                "rarity": 0
+            },
+            "418": {
+                "id": 418,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/6/6c/MMBN3GChip18.png/revision/latest?cb=20111118202957",
+                "name": "BowlManV5",
+                "damage": 180,
+                "codes": ["B"],
+                "memory": 88,
+                "description": "Lines up pins for a strike!",
+                "element": null,
+                "rarity": 0
+            },
+            "419": {
+                "id": 419,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/3/3b/MMBN3GChip19.png/revision/latest?cb=20111118203027",
+                "name": "DarkManV5",
+                "damage": 30,
+                "codes": ["D"],
+                "memory": 88,
+                "description": "Creates 3 caves in enmy area",
+                "element": null,
+                "rarity": 0
+            },
+            "420": {
+                "id": 420,
+                "url": "https://vignette.wikia.nocookie.net/megaman/images/d/dd/MMBN3GChip20.png/revision/latest?cb=20111118203055",
+                "name": "JapanMnV5",
+                "damage": 60,
+                "codes": ["Y"],
+                "memory": 94,
+                "description": "Multiple attacks w/ spear",
+                "element": null,
+                "rarity": 0
+            }
+        }
+    }
+}

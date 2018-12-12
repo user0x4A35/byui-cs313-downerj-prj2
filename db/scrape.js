@@ -25,7 +25,7 @@ function addChipFromRow(row, chipList, chipType) {
             break;
     }
     
-    chipList[chipType][id] = {
+    chipList.chips[chipType][id] = {
         id: id,
         url: url,
         name: name,
@@ -50,11 +50,24 @@ function scrape(res) {
         const dom = new JSDOM(data, {
             contentType: 'text/html',
         });
-        let chipList = {
-            'standard': {},
-            'mega': {},
-            'giga': {},
+        let chipListStandard = {
+            chips: {
+                standard: {},
+            },
         };
+
+        let chipListMega = {
+            chips: {
+                mega: {},
+            },
+        };
+
+        let chipListGiga = {
+            chips: {
+                giga: {},
+            },
+        };
+
         let tables = dom.window.document.getElementsByTagName('table');
         let rows;
 
@@ -62,14 +75,14 @@ function scrape(res) {
         let tblStandardChips = tables[0];
         rows = tblStandardChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
-            addChipFromRow(rows[r], chipList, 'standard');
+            addChipFromRow(rows[r], chipListStandard, 'standard');
         }
 
         // PASS 2: Mega Chips
         let tblMegaChips = tables[1];
         rows = tblMegaChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
-            addChipFromRow(rows[r], chipList, 'mega');
+            addChipFromRow(rows[r], chipListMega, 'mega');
         }
 
         // PASS 3: Giga Chips
@@ -79,10 +92,22 @@ function scrape(res) {
             if (r === 17) {
                 continue;
             }
-            addChipFromRow(rows[r], chipList, 'giga');
+            addChipFromRow(rows[r], chipListGiga, 'giga');
         }
 
-        fs.writeFile('./chips.json', JSON.stringify(chipList), (err) => {
+        fs.writeFile('./json/chipsStandard.json', JSON.stringify(chipListStandard), (err) => {
+            if (err) {
+                return console.error(err);
+            }
+        });
+
+        fs.writeFile('./json/chipsMega.json', JSON.stringify(chipListMega), (err) => {
+            if (err) {
+                return console.error(err);
+            }
+        });
+
+        fs.writeFile('./json/chipsGiga.json', JSON.stringify(chipListGiga), (err) => {
             if (err) {
                 return console.error(err);
             }

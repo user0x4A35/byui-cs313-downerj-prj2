@@ -34,7 +34,7 @@ module.exports = {
                         case 'standard':
                         case 'mega':
                         case 'giga':
-                            let promises = addChips(chipType, chips[key]);
+                            let promises = addChips(chipType, chips[chipType]);
 
                             for (let promise of promises) {
                                 console.log('Add');
