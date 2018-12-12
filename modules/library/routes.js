@@ -72,7 +72,7 @@ function addChips(chipType, chipList) {
         let damage = parseInt(chip.damage || 0);
         let memory = parseInt(chip.memory || 0);
         let description = chip.description | null;
-        let fileName = chip.fileName || null;
+        let fileName = chip.url || null;
         let rarity = chip.rarity;
         let element = chip.element || null;
         let codes = chip.codes;

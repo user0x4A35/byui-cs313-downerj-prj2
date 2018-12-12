@@ -10,7 +10,18 @@ https.get(URL, scrape);
 function addChipFromRow(row, chipList, chipType) {
     let id = Number(row.cells.item(0).innerHTML);
     let url = row.cells.item(1).children.item(0).href.trim();
-    let name = row.cells.item(2).innerHTML.trim();
+    url = url.match(/[\w\-\_]+\.((png)|(gif)|(jp(e){0,1}g))/)[0];
+    let name = row.cells.item(2);
+    if ('children' in name) {
+        let child = name.children.item(0);
+        if (child) {
+            name = child.innerHTML.trim();
+        } else {
+            name = name.innerHTML.trim();
+        }
+    } else {
+        name = name.innerHTML.trim();
+    }
     let damage = Number(row.cells.item(3).innerHTML) || null;
     let codes = row.cells.item(4).innerHTML.trim().split(', ');
     let memory = Number(row.cells.item(5).innerHTML.trim().split(' ')[0]);
