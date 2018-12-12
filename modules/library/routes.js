@@ -31,7 +31,7 @@ const dbQueries = {
 module.exports = {
     chiplist: {
         get: (req, res) => {
-            dbUtil.doDatabase(dbQueries.statsGet, [])
+            dbUtil.doDatabase(dbQueries.chipsGet, [])
             .then((data) => {
                 res
                 .status(200)
