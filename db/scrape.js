@@ -9,8 +9,8 @@ https.get(URL, scrape);
 
 function addChipFromRow(row, chipList, chipType) {
     let id = Number(row.cells.item(0).innerHTML);
-    let url = row.cells.item(1).children.item(0).href.trim();
-    url = url.match(/[\w\-\_]+\.((png)|(gif)|(jp(e){0,1}g))/)[0];
+    let tempURL = row.cells.item(1).children.item(0).href.trim();
+    url = tempURL.match(/[\w\-\_]+\.((png)|(gif)|(jp(e){0,1}g))/)[0];
     let name = row.cells.item(2);
     if ('children' in name) {
         let child = name.children.item(0);
@@ -39,6 +39,7 @@ function addChipFromRow(row, chipList, chipType) {
     chipList.chips[chipType][id] = {
         id: id,
         url: url,
+        tempURL: tempURL,
         name: name,
         damage: damage,
         codes: codes,
@@ -47,6 +48,22 @@ function addChipFromRow(row, chipList, chipType) {
         element: null,
         rarity: 0
     };
+}
+
+function retrieveImage(res, fileName) {
+    data = '';
+
+    res.on('data', (chunk) => {
+        data = chunk;
+    });
+
+    res.on('end', () => {
+        fs.writeFile(`../assets/images/chips/${fileName}`, data, (err) => {
+            if (err) {
+                return console.error(err);
+            }
+        });
+    });
 }
 
 function scrape(res) {
@@ -82,21 +99,21 @@ function scrape(res) {
         let tables = dom.window.document.getElementsByTagName('table');
         let rows;
 
-        // PASS 1: Standard Chips
+        // PASS 1.1: Standard Chips
         let tblStandardChips = tables[0];
         rows = tblStandardChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
             addChipFromRow(rows[r], chipListStandard, 'STANDARD');
         }
 
-        // PASS 2: Mega Chips
+        // PASS 1.2: Mega Chips
         let tblMegaChips = tables[1];
         rows = tblMegaChips.tBodies[0].rows;
         for (let r = 1; r < rows.length; r++) {
             addChipFromRow(rows[r], chipListMega, 'MEGA');
         }
 
-        // PASS 3: Giga Chips
+        // PASS 1.3: Giga Chips
         let tblGigaChips = tables[2];
         rows = tblGigaChips.tBodies[0].rows;
         for (let r = 1; r < 23; r++) {
@@ -104,6 +121,44 @@ function scrape(res) {
                 continue;
             }
             addChipFromRow(rows[r], chipListGiga, 'GIGA');
+        }
+
+        let chipList;
+
+        // PASS 2.1: Standard Chip Images
+        chips = chipListStandard.chips.STANDARD;
+        for (let chipID in chips) {
+            let chip = chips[chipID];
+            let fileName = chip.url;
+            let tempURL = chip.tempURL;
+
+            https.get(tempURL, (res) => {
+                retrieveImage(res, fileName);
+            });
+        }
+        
+        // PASS 2.2: Mega Chip Images
+        chips = chipListStandard.chips.MEGA;
+        for (let chipID in chips) {
+            let chip = chips[chipID];
+            let fileName = chip.url;
+            let tempURL = chip.tempURL;
+
+            https.get(tempURL, (res) => {
+                retrieveImage(res, fileName);
+            });
+        }
+
+        // PASS 2.3: Giga Chip Images
+        chips = chipListStandard.chips.GIGA;
+        for (let chipID in chips) {
+            let chip = chips[chipID];
+            let fileName = chip.url;
+            let tempURL = chip.tempURL;
+
+            https.get(tempURL, (res) => {
+                retrieveImage(res, fileName);
+            });
         }
 
         fs.writeFile('./json/chipsStandard.json', JSON.stringify(chipListStandard), (err) => {
