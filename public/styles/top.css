@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Press Start 2P Regular';
+    src: url('assets/fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Joystix Mono Regular';
+    src: url('assets/fonts/joystix_monospace.ttf');
+}
+
+body {
+    font-family: 'Joystix Mono Regular';
+}

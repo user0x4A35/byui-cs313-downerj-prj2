@@ -12,10 +12,10 @@ $(document).ready(() => {
                 let imgCell = tableRow.insertCell();
                 let img = constructElement('IMG', {
                     href: `./assets/images/chips/${dataRow.filename}`,
-                    alt: dataRow.name,
+                    alt: dataRow.filename,
                 });
-                img.style.width = '100px';
-                img.style.height = '100px';
+                img.style.width = '64px';
+                img.style.height = '56px';
                 imgCell.appendChild(img);
 
                 for (let key in dataRow) {
