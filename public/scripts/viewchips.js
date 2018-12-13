@@ -8,6 +8,16 @@ $(document).ready(() => {
             for (let key in data.rows) {
                 let dataRow = data.rows[key];
                 let tableRow = tbody.insertRow();
+
+                let imgCell = tableRow.insertCell();
+                let img = constructElement('IMG', {
+                    href: `/assets/images/chips/${dataRow.url}`,
+                    alt: dataRow.name,
+                });
+                img.style.width = '100px';
+                img.style.height = '100px';
+                imgCell.appendChild(img);
+
                 for (let key in dataRow) {
                     let value = dataRow[key];
                     let cell = tableRow.insertCell();
