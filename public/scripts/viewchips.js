@@ -1,6 +1,6 @@
 $(document).ready(() => {
     $.get({
-        url: '/chiplist',
+        url: '/library/chiplist',
         dataType: 'json',
         success: (data, textStatus, jqXHR) => {
             let tbody = $('#tbl-chip-list > tbody:last-child')[0];
