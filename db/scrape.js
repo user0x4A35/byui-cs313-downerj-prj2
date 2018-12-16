@@ -11,6 +11,7 @@ function addChipFromRow(row, chipList, chipType) {
     let id = Number(row.cells.item(0).innerHTML);
     let tempURL = row.cells.item(1).children.item(0).href.trim();
     url = tempURL.match(/[\w\-\_]+\.((png)|(gif)|(jp(e){0,1}g))/)[0];
+    // url = url.replace('.png', '.gif');
     let name = row.cells.item(2);
     if ('children' in name) {
         let child = name.children.item(0);
@@ -58,7 +59,7 @@ function retrieveImage(res, fileName) {
     });
 
     res.on('end', () => {
-        fs.writeFile(`../assets/images/chips/${fileName}`, data, (err) => {
+        fs.writeFile(`../public/assets/images/chips/${fileName}`, data, (err) => {
             if (err) {
                 return console.error(err);
             }
@@ -134,11 +135,13 @@ function scrape(res) {
 
             https.get(tempURL, (res) => {
                 retrieveImage(res, fileName);
-            });
+            }).on('error', (err) => {
+                console.error(err);
+            });;
         }
         
         // PASS 2.2: Mega Chip Images
-        chips = chipListStandard.chips.MEGA;
+        chips = chipListMega.chips.MEGA;
         for (let chipID in chips) {
             let chip = chips[chipID];
             let fileName = chip.url;
@@ -146,11 +149,13 @@ function scrape(res) {
 
             https.get(tempURL, (res) => {
                 retrieveImage(res, fileName);
-            });
+            }).on('error', (err) => {
+                console.error(err);
+            });;
         }
 
         // PASS 2.3: Giga Chip Images
-        chips = chipListStandard.chips.GIGA;
+        chips = chipListGiga.chips.GIGA;
         for (let chipID in chips) {
             let chip = chips[chipID];
             let fileName = chip.url;
@@ -158,25 +163,27 @@ function scrape(res) {
 
             https.get(tempURL, (res) => {
                 retrieveImage(res, fileName);
+            }).on('error', (err) => {
+                console.error(err);
             });
         }
 
-        fs.writeFile('./json/chipsStandard.json', JSON.stringify(chipListStandard), (err) => {
-            if (err) {
-                return console.error(err);
-            }
-        });
+        // fs.writeFile('./json/chipsStandard.json', JSON.stringify(chipListStandard), (err) => {
+        //     if (err) {
+        //         return console.error(err);
+        //     }
+        // });
 
-        fs.writeFile('./json/chipsMega.json', JSON.stringify(chipListMega), (err) => {
-            if (err) {
-                return console.error(err);
-            }
-        });
+        // fs.writeFile('./json/chipsMega.json', JSON.stringify(chipListMega), (err) => {
+        //     if (err) {
+        //         return console.error(err);
+        //     }
+        // });
 
-        fs.writeFile('./json/chipsGiga.json', JSON.stringify(chipListGiga), (err) => {
-            if (err) {
-                return console.error(err);
-            }
-        });
+        // fs.writeFile('./json/chipsGiga.json', JSON.stringify(chipListGiga), (err) => {
+        //     if (err) {
+        //         return console.error(err);
+        //     }
+        // });
     });
 }

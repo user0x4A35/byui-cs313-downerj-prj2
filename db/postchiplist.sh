@@ -14,6 +14,7 @@ do
         -H "Content-Type: application/json" \
         -H "Accept: application/json" \
         -d @$f \
-        "https://byui-cs313-downerj-prj2.herokuapp.com/library/chiplist"
+        "http://localhost:5000/library/chiplist"
     echo -ne "\n"
 done
+# "https://byui-cs313-downerj-prj2.herokuapp.com/library/chiplist"

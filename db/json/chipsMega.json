@@ -4,6 +4,7 @@
             "301": {
                 "id": 301,
                 "url": "MMBN3MChip01.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/bc/MMBN3MChip01.png/revision/latest?cb=20110812231025",
                 "name": "Muramasa",
                 "damage": null,
                 "codes": ["M"],
@@ -15,6 +16,7 @@
             "302": {
                 "id": 302,
                 "url": "MMBN2Chip258.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/fc/MMBN2Chip258.png/revision/latest?cb=20111112021818",
                 "name": "HeroSwrd",
                 "damage": 180,
                 "codes": ["P"],
@@ -26,6 +28,7 @@
             "303": {
                 "id": 303,
                 "url": "MMBN2Chip082.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/50/MMBN2Chip082.png/revision/latest?cb=20111112011221",
                 "name": "ZeusHamr",
                 "damage": 250,
                 "codes": ["Z"],
@@ -37,6 +40,7 @@
             "304": {
                 "id": 304,
                 "url": "MMBN3MChip04.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/12/MMBN3MChip04.png/revision/latest?cb=20111120223945",
                 "name": "StandOut",
                 "damage": 220,
                 "codes": ["P"],
@@ -48,6 +52,7 @@
             "305": {
                 "id": 305,
                 "url": "MMBN3MChip05.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/bc/MMBN3MChip05.png/revision/latest?cb=20111120224003",
                 "name": "Salamndr",
                 "damage": 300,
                 "codes": ["S", "*"],
@@ -59,6 +64,7 @@
             "306": {
                 "id": 306,
                 "url": "MMBN3MChip06.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/4/4b/MMBN3MChip06.png/revision/latest?cb=20111120224021",
                 "name": "WatrLine",
                 "damage": 180,
                 "codes": ["C", "*"],
@@ -70,6 +76,7 @@
             "307": {
                 "id": 307,
                 "url": "MMBN3MChip07.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/3f/MMBN3MChip07.png/revision/latest?cb=20111120224040",
                 "name": "Fountain",
                 "damage": 240,
                 "codes": ["D", "*"],
@@ -81,6 +88,7 @@
             "308": {
                 "id": 308,
                 "url": "MMBN3MChip08.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/2c/MMBN3MChip08.png/revision/latest?cb=20111120224056",
                 "name": "Lightning",
                 "damage": 160,
                 "codes": ["L", "*"],
@@ -92,6 +100,7 @@
             "309": {
                 "id": 309,
                 "url": "MMBN3MChip09.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/23/MMBN3MChip09.png/revision/latest?cb=20111120224210",
                 "name": "Bolt",
                 "damage": 210,
                 "codes": ["T", "*"],
@@ -103,6 +112,7 @@
             "310": {
                 "id": 310,
                 "url": "MMBN2Chip254.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/5e/MMBN2Chip254.png/revision/latest?cb=20111112021739",
                 "name": "GaiaSwrd",
                 "damage": 100,
                 "codes": ["G", "*"],
@@ -114,6 +124,7 @@
             "311": {
                 "id": 311,
                 "url": "MMBN3MChip11.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/8b/MMBN3MChip11.png/revision/latest?cb=20111120224115",
                 "name": "GaiaBlad",
                 "damage": 100,
                 "codes": ["G", "*"],
@@ -125,6 +136,7 @@
             "312": {
                 "id": 312,
                 "url": "MMBN2Chip259.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/a/ac/MMBN2Chip259.png/revision/latest?cb=20111112021837",
                 "name": "Meteors",
                 "damage": 40,
                 "codes": ["R"],
@@ -136,6 +148,7 @@
             "313": {
                 "id": 313,
                 "url": "MMBN2Chip142.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/5a/MMBN2Chip142.png/revision/latest?cb=20111112013533",
                 "name": "Guardian",
                 "damage": null,
                 "codes": ["O"],
@@ -147,6 +160,7 @@
             "314": {
                 "id": 314,
                 "url": "MMBNChip104.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/25/MMBNChip104.png/revision/latest?cb=20111111011248",
                 "name": "Anubis",
                 "damage": null,
                 "codes": ["A"],
@@ -158,6 +172,7 @@
             "315": {
                 "id": 315,
                 "url": "MMBN2Chip112.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/28/MMBN2Chip112.png/revision/latest?cb=20111112012316",
                 "name": "GodStone",
                 "damage": 150,
                 "codes": ["S"],
@@ -169,6 +184,7 @@
             "316": {
                 "id": 316,
                 "url": "MMBN2Chip113.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/9/9c/MMBN2Chip113.png/revision/latest?cb=20111112012334",
                 "name": "OldWood",
                 "damage": 100,
                 "codes": ["W"],
@@ -180,6 +196,7 @@
             "317": {
                 "id": 317,
                 "url": "MMBN2Chip177.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/9/9d/MMBN2Chip177.png/revision/latest?cb=20111112015156",
                 "name": "Jealousy",
                 "damage": 100,
                 "codes": ["J"],
@@ -191,6 +208,7 @@
             "318": {
                 "id": 318,
                 "url": "MMBN3MChip18.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/a/a6/MMBN3MChip18.png/revision/latest?cb=20111120224142",
                 "name": "Poltrgst",
                 "damage": null,
                 "codes": ["G"],
@@ -202,6 +220,7 @@
             "319": {
                 "id": 319,
                 "url": "MMBN2Chip166.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/3f/MMBN2Chip166.png/revision/latest?cb=20111112014759",
                 "name": "LifeAura",
                 "damage": null,
                 "codes": ["D"],
@@ -213,6 +232,7 @@
             "320": {
                 "id": 320,
                 "url": "MMBN2Chip148.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/88/MMBN2Chip148.png/revision/latest?cb=20111112013933",
                 "name": "FullCust",
                 "damage": null,
                 "codes": ["*"],
@@ -224,6 +244,7 @@
             "321": {
                 "id": 321,
                 "url": "MMBN2Chip187.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/e4/MMBN2Chip187.png/revision/latest?cb=20111112015538",
                 "name": "Atk+30",
                 "damage": null,
                 "codes": ["*"],
@@ -235,6 +256,7 @@
             "322": {
                 "id": 322,
                 "url": "MMBN3MChip22.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/7/70/MMBN3MChip22.png/revision/latest?cb=20111120224226",
                 "name": "Navi+40",
                 "damage": null,
                 "codes": ["*"],
@@ -246,6 +268,7 @@
             "323": {
                 "id": 323,
                 "url": "MMBN3MChip23.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/38/MMBN3MChip23.png/revision/latest?cb=20111120224245",
                 "name": "Roll",
                 "damage": 20,
                 "codes": ["R"],
@@ -257,6 +280,7 @@
             "324": {
                 "id": 324,
                 "url": "MMBN3MChip24.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/4/43/MMBN3MChip24.png/revision/latest?cb=20111120224301",
                 "name": "Roll V2",
                 "damage": 30,
                 "codes": ["R"],
@@ -268,6 +292,7 @@
             "325": {
                 "id": 325,
                 "url": "MMBN3MChip25.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/c/c5/MMBN3MChip25.png/revision/latest?cb=20111120224317",
                 "name": "Roll V3",
                 "damage": 40,
                 "codes": ["R"],
@@ -279,6 +304,7 @@
             "326": {
                 "id": 326,
                 "url": "MMBN3MChip26.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/b2/MMBN3MChip26.png/revision/latest?cb=20110728181149",
                 "name": "GutsMan",
                 "damage": 50,
                 "codes": ["G"],
@@ -290,6 +316,7 @@
             "327": {
                 "id": 327,
                 "url": "MMBN3MChip27.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/4/44/MMBN3MChip27.png/revision/latest?cb=20110728181221",
                 "name": "GutsMan V2",
                 "damage": 70,
                 "codes": ["G"],
@@ -301,6 +328,7 @@
             "328": {
                 "id": 328,
                 "url": "MMBN3MChip28.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/a/ad/MMBN3MChip28.png/revision/latest?cb=20110728181329",
                 "name": "GutsMan V3",
                 "damage": 90,
                 "codes": ["G"],
@@ -312,6 +340,7 @@
             "329": {
                 "id": 329,
                 "url": "MMBN3MChip29.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/4/42/MMBN3MChip29.png/revision/latest?cb=20110728181400",
                 "name": "GutsMan V4",
                 "damage": 100,
                 "codes": ["G"],
@@ -323,6 +352,7 @@
             "330": {
                 "id": 330,
                 "url": "MMBN3MChip30.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/b2/MMBN3MChip30.png/revision/latest?cb=20111120224337",
                 "name": "ProtoMan",
                 "damage": 160,
                 "codes": ["B"],
@@ -334,6 +364,7 @@
             "331": {
                 "id": 331,
                 "url": "MMBN3MChip31.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/67/MMBN3MChip31.png/revision/latest?cb=20111120224353",
                 "name": "ProtoMn V2",
                 "damage": 180,
                 "codes": ["B"],
@@ -345,6 +376,7 @@
             "332": {
                 "id": 332,
                 "url": "MMBN3MChip32.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/15/MMBN3MChip32.png/revision/latest?cb=20111120224410",
                 "name": "ProtoMn V3",
                 "damage": 200,
                 "codes": ["B"],
@@ -356,6 +388,7 @@
             "333": {
                 "id": 333,
                 "url": "MMBN3MChip33.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/0/0e/MMBN3MChip33.png/revision/latest?cb=20111120224425",
                 "name": "ProtoMn V4",
                 "damage": 220,
                 "codes": ["B"],
@@ -367,6 +400,7 @@
             "334": {
                 "id": 334,
                 "url": "MMBN3MChip34.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/e0/MMBN3MChip34.png/revision/latest?cb=20111120224445",
                 "name": "FlashMan",
                 "damage": 50,
                 "codes": ["F"],
@@ -378,6 +412,7 @@
             "335": {
                 "id": 335,
                 "url": "MMBN3MChip35.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/0/07/MMBN3MChip35.png/revision/latest?cb=20111120224504",
                 "name": "FlashMn V2",
                 "damage": 70,
                 "codes": ["F"],
@@ -389,6 +424,7 @@
             "336": {
                 "id": 336,
                 "url": "MMBN3MChip36.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/1f/MMBN3MChip36.png/revision/latest?cb=20111120224520",
                 "name": "FlashMn V3",
                 "damage": 90,
                 "codes": ["F"],
@@ -400,6 +436,7 @@
             "337": {
                 "id": 337,
                 "url": "MMBN3MChip37.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/4/4e/MMBN3MChip37.png/revision/latest?cb=20111120224537",
                 "name": "FlashMn V4",
                 "damage": 120,
                 "codes": ["F"],
@@ -411,6 +448,7 @@
             "338": {
                 "id": 338,
                 "url": "MMBN3MChip38.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/0/09/MMBN3MChip38.png/revision/latest?cb=20111120224600",
                 "name": "BeastMan",
                 "damage": 40,
                 "codes": ["B"],
@@ -422,6 +460,7 @@
             "339": {
                 "id": 339,
                 "url": "MMBN3MChip39.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/ed/MMBN3MChip39.png/revision/latest?cb=20111120224616",
                 "name": "BeastMn V2",
                 "damage": 50,
                 "codes": ["B"],
@@ -433,6 +472,7 @@
             "340": {
                 "id": 340,
                 "url": "MMBN3MChip40.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/86/MMBN3MChip40.png/revision/latest?cb=20111120224639",
                 "name": "BeastMn V3",
                 "damage": 60,
                 "codes": ["B"],
@@ -444,6 +484,7 @@
             "341": {
                 "id": 341,
                 "url": "MMBN3MChip41.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/8f/MMBN3MChip41.png/revision/latest?cb=20111120224657",
                 "name": "BeastMn V4",
                 "damage": 70,
                 "codes": ["B"],
@@ -455,6 +496,7 @@
             "342": {
                 "id": 342,
                 "url": "MMBN3MChip42.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/66/MMBN3MChip42.png/revision/latest?cb=20111120224716",
                 "name": "BubblMan",
                 "damage": 20,
                 "codes": ["B"],
@@ -466,6 +508,7 @@
             "343": {
                 "id": 343,
                 "url": "MMBN3MChip43.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/d/db/MMBN3MChip43.png/revision/latest?cb=20111120224733",
                 "name": "BubblMn V2",
                 "damage": 20,
                 "codes": ["B"],
@@ -477,6 +520,7 @@
             "344": {
                 "id": 344,
                 "url": "MMBN3MChip44.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/8f/MMBN3MChip44.png/revision/latest?cb=20111120224751",
                 "name": "BubblMn V3",
                 "damage": 20,
                 "codes": ["B"],
@@ -488,6 +532,7 @@
             "345": {
                 "id": 345,
                 "url": "MMBN3MChip45.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/b3/MMBN3MChip45.png/revision/latest?cb=20111120224810",
                 "name": "BubblMn V4",
                 "damage": 20,
                 "codes": ["B"],
@@ -499,6 +544,7 @@
             "346": {
                 "id": 346,
                 "url": "MMBN3MChip46.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/2a/MMBN3MChip46.png/revision/latest?cb=20111120224826",
                 "name": "DesrtMan",
                 "damage": 120,
                 "codes": ["D"],
@@ -510,6 +556,7 @@
             "347": {
                 "id": 347,
                 "url": "MMBN3MChip47.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/fe/MMBN3MChip47.png/revision/latest?cb=20111120224922",
                 "name": "DesrtMn V2",
                 "damage": 140,
                 "codes": ["D"],
@@ -521,6 +568,7 @@
             "348": {
                 "id": 348,
                 "url": "MMBN3MChip48.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/6c/MMBN3MChip48.png/revision/latest?cb=20111120224938",
                 "name": "DesrtMn V3",
                 "damage": 160,
                 "codes": ["D"],
@@ -532,6 +580,7 @@
             "349": {
                 "id": 349,
                 "url": "MMBN3MChip49.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/c/c0/MMBN3MChip49.png/revision/latest?cb=20111120224955",
                 "name": "DesrtMn V4",
                 "damage": 180,
                 "codes": ["D"],
@@ -543,6 +592,7 @@
             "350": {
                 "id": 350,
                 "url": "MMBN3MChip50.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/32/MMBN3MChip50.png/revision/latest?cb=20111120225013",
                 "name": "PlantMan",
                 "damage": 20,
                 "codes": ["P"],
@@ -554,6 +604,7 @@
             "351": {
                 "id": 351,
                 "url": "MMBN3MChip51.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/0/06/MMBN3MChip51.png/revision/latest?cb=20111120225031",
                 "name": "PlantMn V2",
                 "damage": 30,
                 "codes": ["P"],
@@ -565,6 +616,7 @@
             "352": {
                 "id": 352,
                 "url": "MMBN3MChip52.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/e5/MMBN3MChip52.png/revision/latest?cb=20111120225047",
                 "name": "PlantMn V3",
                 "damage": 40,
                 "codes": ["P"],
@@ -576,6 +628,7 @@
             "353": {
                 "id": 353,
                 "url": "MMBN3MChip53.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/c/cf/MMBN3MChip53.png/revision/latest?cb=20111120225103",
                 "name": "PlantMn V4",
                 "damage": 50,
                 "codes": ["P"],
@@ -587,6 +640,7 @@
             "354": {
                 "id": 354,
                 "url": "MMBN3MChip54.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/20/MMBN3MChip54.png/revision/latest?cb=20111120225126",
                 "name": "FlamMan",
                 "damage": 120,
                 "codes": ["F"],
@@ -598,6 +652,7 @@
             "355": {
                 "id": 355,
                 "url": "MMBN3MChip55.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/d/d9/MMBN3MChip55.png/revision/latest?cb=20111120225141",
                 "name": "FlamMan V2",
                 "damage": 150,
                 "codes": ["F"],
@@ -609,6 +664,7 @@
             "356": {
                 "id": 356,
                 "url": "MMBN3MChip56.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/66/MMBN3MChip56.png/revision/latest?cb=20111120225159",
                 "name": "FlamMan V3",
                 "damage": 180,
                 "codes": ["F"],
@@ -620,6 +676,7 @@
             "357": {
                 "id": 357,
                 "url": "MMBN3MChip57.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/5c/MMBN3MChip57.png/revision/latest?cb=20111120225218",
                 "name": "FlamMan V4",
                 "damage": 210,
                 "codes": ["F"],
@@ -631,6 +688,7 @@
             "358": {
                 "id": 358,
                 "url": "MMBN3MChip58.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/55/MMBN3MChip58.png/revision/latest?cb=20111120232204",
                 "name": "DrillMan",
                 "damage": 70,
                 "codes": ["D"],
@@ -642,6 +700,7 @@
             "359": {
                 "id": 359,
                 "url": "MMBN3MChip59.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/65/MMBN3MChip59.png/revision/latest?cb=20111120225259",
                 "name": "DrillMn V2",
                 "damage": 90,
                 "codes": ["D"],
@@ -653,6 +712,7 @@
             "360": {
                 "id": 360,
                 "url": "MMBN3MChip60.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/f8/MMBN3MChip60.png/revision/latest?cb=20111120225316",
                 "name": "DrillMn V3",
                 "damage": 110,
                 "codes": ["D"],
@@ -664,6 +724,7 @@
             "361": {
                 "id": 361,
                 "url": "MMBN3MChip61.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/7/75/MMBN3MChip61.png/revision/latest?cb=20111120225333",
                 "name": "DrillMn V4",
                 "damage": 130,
                 "codes": ["D"],
@@ -675,6 +736,7 @@
             "362": {
                 "id": 362,
                 "url": "MMBN3MChip62.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/f8/MMBN3MChip62.png/revision/latest?cb=20111120225352",
                 "name": "MetalMan",
                 "damage": 100,
                 "codes": ["M"],
@@ -686,6 +748,7 @@
             "363": {
                 "id": 363,
                 "url": "MMBN3MChip63.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/ea/MMBN3MChip63.png/revision/latest?cb=20111120225408",
                 "name": "MetalMn V2",
                 "damage": 130,
                 "codes": ["M"],
@@ -697,6 +760,7 @@
             "364": {
                 "id": 364,
                 "url": "MMBN3MChip64.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/fb/MMBN3MChip64.png/revision/latest?cb=20111120225456",
                 "name": "MetalMn V3",
                 "damage": 160,
                 "codes": ["M"],
@@ -708,6 +772,7 @@
             "365": {
                 "id": 365,
                 "url": "MMBN3MChip65.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/69/MMBN3MChip65.png/revision/latest?cb=20111120225512",
                 "name": "MetalMn V4",
                 "damage": 190,
                 "codes": ["M"],
@@ -719,6 +784,7 @@
             "366": {
                 "id": 366,
                 "url": "MMBN3MChip66.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/34/MMBN3MChip66.png/revision/latest?cb=20111120225529",
                 "name": "KingMan",
                 "damage": 140,
                 "codes": ["K"],
@@ -730,6 +796,7 @@
             "367": {
                 "id": 367,
                 "url": "MMBN3MChip67.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/61/MMBN3MChip67.png/revision/latest?cb=20111120225546",
                 "name": "KingMan V2",
                 "damage": 170,
                 "codes": ["K"],
@@ -741,6 +808,7 @@
             "368": {
                 "id": 368,
                 "url": "MMBN3MChip68.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/3b/MMBN3MChip68.png/revision/latest?cb=20111120225611",
                 "name": "KingMan V3",
                 "damage": 200,
                 "codes": ["K"],
@@ -752,6 +820,7 @@
             "369": {
                 "id": 369,
                 "url": "MMBN3MChip69.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/3/38/MMBN3MChip69.png/revision/latest?cb=20111120225627",
                 "name": "KingMan V4",
                 "damage": 240,
                 "codes": ["K"],
@@ -763,6 +832,7 @@
             "370": {
                 "id": 370,
                 "url": "MMBN3MChip70.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/b/b2/MMBN3MChip70.png/revision/latest?cb=20111120225643",
                 "name": "MistMan",
                 "damage": 90,
                 "codes": ["M"],
@@ -774,6 +844,7 @@
             "371": {
                 "id": 371,
                 "url": "MMBN3MChip71.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/16/MMBN3MChip71.png/revision/latest?cb=20111120225658",
                 "name": "MistMan V2",
                 "damage": 110,
                 "codes": ["M"],
@@ -785,6 +856,7 @@
             "372": {
                 "id": 372,
                 "url": "MMBN3MChip72.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/f/fd/MMBN3MChip72.png/revision/latest?cb=20111120225714",
                 "name": "MistMan V3",
                 "damage": 130,
                 "codes": ["M"],
@@ -796,6 +868,7 @@
             "373": {
                 "id": 373,
                 "url": "MMBN3MChip73.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/2/27/MMBN3MChip73.png/revision/latest?cb=20111120225729",
                 "name": "MistMan V4",
                 "damage": 150,
                 "codes": ["M"],
@@ -807,6 +880,7 @@
             "374": {
                 "id": 374,
                 "url": "MMBN3MChip74.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/87/MMBN3MChip74.png/revision/latest?cb=20111120225747",
                 "name": "BowlMan",
                 "damage": 100,
                 "codes": ["B"],
@@ -818,6 +892,7 @@
             "375": {
                 "id": 375,
                 "url": "MMBN3MChip75.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/86/MMBN3MChip75.png/revision/latest?cb=20111120225805",
                 "name": "BowlMan V2",
                 "damage": 120,
                 "codes": ["B"],
@@ -829,6 +904,7 @@
             "376": {
                 "id": 376,
                 "url": "MMBN3MChip76.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/8/81/MMBN3MChip76.png/revision/latest?cb=20111120225825",
                 "name": "BowlMan V3",
                 "damage": 140,
                 "codes": ["B"],
@@ -840,6 +916,7 @@
             "377": {
                 "id": 377,
                 "url": "MMBN3MChip77.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/6/66/MMBN3MChip77.png/revision/latest?cb=20111120225841",
                 "name": "BowlMan V4",
                 "damage": 160,
                 "codes": ["B"],
@@ -851,6 +928,7 @@
             "378": {
                 "id": 378,
                 "url": "MMBN3MChip78.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/ea/MMBN3MChip78.png/revision/latest?cb=20111120225857",
                 "name": "DarkMan",
                 "damage": 30,
                 "codes": ["D"],
@@ -862,6 +940,7 @@
             "379": {
                 "id": 379,
                 "url": "MMBN3MChip79.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/d/d7/MMBN3MChip79.png/revision/latest?cb=20111120225922",
                 "name": "DarkMan V2",
                 "damage": 30,
                 "codes": ["D"],
@@ -873,6 +952,7 @@
             "380": {
                 "id": 380,
                 "url": "MMBN3MChip80.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/17/MMBN3MChip80.png/revision/latest?cb=20111120225941",
                 "name": "DarkMan V3",
                 "damage": 30,
                 "codes": ["D"],
@@ -884,6 +964,7 @@
             "381": {
                 "id": 381,
                 "url": "MMBN3MChip81.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/9/95/MMBN3MChip81.png/revision/latest?cb=20111120230001",
                 "name": "DarkMan V4",
                 "damage": 30,
                 "codes": ["D"],
@@ -895,6 +976,7 @@
             "382": {
                 "id": 382,
                 "url": "MMBN3MChip82.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/0/06/MMBN3MChip82.png/revision/latest?cb=20111120230024",
                 "name": "JapanMan",
                 "damage": 40,
                 "codes": ["Y"],
@@ -906,6 +988,7 @@
             "383": {
                 "id": 383,
                 "url": "MMBN3MChip83.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/a/a9/MMBN3MChip83.png/revision/latest?cb=20111120230041",
                 "name": "JapanMn V2",
                 "damage": 45,
                 "codes": ["Y"],
@@ -917,6 +1000,7 @@
             "384": {
                 "id": 384,
                 "url": "MMBN3MChip84.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/5/54/MMBN3MChip84.png/revision/latest?cb=20111120230127",
                 "name": "JapanMn V3",
                 "damage": 50,
                 "codes": ["Y"],
@@ -928,6 +1012,7 @@
             "385": {
                 "id": 385,
                 "url": "MMBN3MChip85.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/e/ef/MMBN3MChip85.png/revision/latest?cb=20111120230152",
                 "name": "JapanMn V4",
                 "damage": 55,
                 "codes": ["Y"],
@@ -939,6 +1024,7 @@
             "386": {
                 "id": 386,
                 "url": "PunkChip.png",
+                "tempURL": "https://vignette.wikia.nocookie.net/megaman/images/1/10/PunkChip.png/revision/latest?cb=20100324161819",
                 "name": "Punk",
                 "damage": 180,
                 "codes": ["P"],

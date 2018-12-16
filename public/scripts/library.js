@@ -20,6 +20,9 @@ $(document).ready(() => {
                 imgCell.appendChild(img);
 
                 for (let key in dataRow) {
+                    if (key === 'filename') {
+                        continue;
+                    }
                     let value = dataRow[key];
                     let cell = tableRow.insertCell();
                     cell.innerText = (value !== null && value !== undefined) ? value : 'Null';

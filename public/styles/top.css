@@ -9,31 +9,43 @@
 }
 
 body {
-    font-family: 'Press Start 2P Regular';
+    font-family: 'Monaco';
     font-size: 14px;
-    background-color: #000;
+    letter-spacing: 2px;
+    background: url('../assets/images/bg/circuit_board_dark.jpg');
     color: #eef;
+}
+
+h1 {
+    font-family: 'Press Start 2P Regular';
 }
 
 .u-meta-wrapper {
     max-width: 1000px;
     margin: 10px auto 10px auto;
-    background-color: #004;
-    border-top: 7px solid #fa0;
+    background-color: rgba(0, 127, 200, 90%);
+    border-top: 7px solid #f00;
+    padding: 10px;
 }
 
 .u-table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 .u-table tr:hover {
-    background-color: #008;
+    background-color: rgba(200, 0, 0, 90%);
+    cursor: pointer;
 }
 
 .u-table th {
-    border-bottom: 4px solid #ddf;
+    border-bottom: 4px solid #f00;
 }
 
 .u-table td {
-    border: 1px solid #99f;
+    border-left: 1px solid #eef;
+    border-right: 1px solid #eef;
+    border-bottom: 2px solid #fff;
+    padding: 0 3px 0 3px;
+    overflow: scroll;
 }

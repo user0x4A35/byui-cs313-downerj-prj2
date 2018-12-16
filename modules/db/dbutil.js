@@ -36,6 +36,10 @@ function instantiatePool() {
     pgPool = new Pool({
         connectionString: process.env.DATABASE_URL,
         ssl: true,
+        // user: process.env.USER,
+        // host: 'localhost',
+        // database: 'mmbn',
+        // post: 5432,
     });
 
     console.log(process.env.DATABASE_URL);
