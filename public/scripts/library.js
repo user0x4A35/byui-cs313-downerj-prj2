@@ -1,12 +1,15 @@
+let dataRows = {};
+
 $(document).ready(() => {
     $.get({
         url: '/library/chiplist',
         dataType: 'json',
         success: (data, textStatus, jqXHR) => {
             let tbody = $('#tbl-chip-list > tbody:last-child')[0];
+            let dataRows = data.rows;
 
-            for (let key in data.rows) {
-                let dataRow = data.rows[key];
+            for (let key in dataRows) {
+                let dataRow = dataRows[key];
                 let tableRow = tbody.insertRow();
 
                 let imgCell = tableRow.insertCell();
@@ -20,12 +23,38 @@ $(document).ready(() => {
                 imgCell.appendChild(img);
 
                 for (let key in dataRow) {
-                    if (key === 'filename') {
-                        continue;
+                    let value;
+
+                    switch (key) {
+                        case 'filename':
+                            continue;
+                        case 'codes':
+                            let codes = dataRow[key];
+                            value = codes
+                                .replace(/[\{\}]*/g, '')
+                                .split(/\,\s*/)
+                                .sort()
+                                .join(' ');
+                            break;
+                        case 'id':
+                            let id = dataRow[key];
+                            if (id >= 300 && id < 400) {
+                                value = id - 300;
+                            } else if (id >= 400) {
+                                value = id - 400;
+                            } else {
+                                value = id;
+                            }
+                            break;
+                        case 'rarity':
+                            value = parseInt(dataRow[key]);
+                            break;
+                        default:
+                            value = dataRow[key];
                     }
-                    let value = dataRow[key];
+
                     let cell = tableRow.insertCell();
-                    cell.innerText = (value !== null && value !== undefined) ? value : 'Null';
+                    cell.innerHTML = (value) ? value : '&mdash;';
                 } 
             }
         },
