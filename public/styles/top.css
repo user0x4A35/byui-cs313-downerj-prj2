@@ -13,33 +13,42 @@ body {
     font-size: 14px;
     letter-spacing: 2px;
     background: url('../assets/images/bg/circuit_board_dark.jpg');
-    color: #eef;
+    background-position: right top;
+    background-attachment: fixed;
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Press Start 2P Regular';
+    color: #fff;
 }
 
 .u-meta-wrapper {
     max-width: 1000px;
     margin: 10px auto 10px auto;
-    background-color: rgba(0, 127, 200, 90%);
+    background-color: rgba(0, 180, 255, 90%);
     border-top: 7px solid #f00;
-    padding: 10px;
+    padding: 5px 50px 5px 50px;
 }
 
 .u-table {
+    background-color: #ccc;
     border-collapse: collapse;
     width: 100%;
 }
 
-.u-table tr:hover {
-    background-color: rgba(200, 0, 0, 90%);
-    cursor: pointer;
+.u-table thead {
+    position: sticky;
+    top: 0;
+    font-family: 'Verdana', sans-serif;
 }
 
 .u-table th {
-    border-bottom: 4px solid #f00;
+    background-color: #f00;
+    color: #000;
+    position: sticky;
+    top: 0;
+    text-align: left;
+    padding: 5px;
 }
 
 .u-table td {
@@ -48,4 +57,14 @@ h1 {
     border-bottom: 2px solid #fff;
     padding: 0 3px 0 3px;
     overflow: scroll;
+}
+
+.u-table td:first-child {
+    background-color: #ccc;
+}
+
+.u-table tr:hover {
+    background-color: #f00;
+    cursor: pointer;
+    /* color: #fff; */
 }
