@@ -52,15 +52,15 @@ h1, h2, h3, h4 {
 }
 
 .u-table td {
-    border-left: 1px solid #eef;
-    border-right: 1px solid #eef;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #eee;
     padding: 0 3px 0 3px;
     overflow: scroll;
 }
 
 .u-table td:first-child {
     background-color: #ccc;
+    border-right: 2px solid #eee;
+    padding: 0;
 }
 
 .u-table tr:hover {
