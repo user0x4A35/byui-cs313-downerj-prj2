@@ -10,4 +10,19 @@
 
 body {
     font-family: 'Joystix Mono Regular';
+    font-size: 14px;
+    background-color: #005;
+    color: #ccf;
+}
+
+.u-table {
+    border-collapse: collapse;
+}
+
+.u-table th {
+    border-bottom: 4px solid #ddf;
+}
+
+.u-table td {
+    border: 1px solid #99f;
 }
