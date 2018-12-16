@@ -23,37 +23,41 @@ $(document).ready(() => {
                 imgCell.appendChild(img);
 
                 for (let key in dataRow) {
-                    let value;
+                    let value = dataRow[key];
 
                     switch (key) {
                         case 'filename':
                             continue;
                         case 'codes':
-                            let codes = dataRow[key];
-                            value = codes
+                            value = value
                                 .replace(/[\{\}]*/g, '')
                                 .split(/\,\s*/)
                                 .sort()
-                                .join(' ');
+                                .join('');
                             break;
                         case 'id':
-                            let id = dataRow[key];
-                            if (id >= 300 && id < 400) {
-                                value = `M&mdash;${id - 300}`;
-                            } else if (id >= 400) {
-                                value = `G&mdash;${id - 400}`;
+                            if (value >= 300 && value < 400) {
+                                value = `M&mdash;${value - 300}`;
+                            } else if (value >= 400) {
+                                value = `G&mdash;${value - 400}`;
                             } else {
-                                value = `S&mdash;${id}`;
+                                value = `S&mdash;${value}`;
                             }
                             break;
                         case 'rarity':
-                            value = parseInt(dataRow[key]);
+                            value = parseInt(value);
                             break;
-                        default:
-                            value = dataRow[key];
+                        case 'chiptype':
+                            if (value === 'STANDARD') {
+                                value = 'STND';
+                            }
+                            break;
                     }
 
                     let cell = tableRow.insertCell();
+                    if (key === 'codes') {
+                        cell.style.fontFamily = 'monospace';
+                    }
                     cell.innerHTML = (value) ? value : '&mdash;';
                 } 
             }
