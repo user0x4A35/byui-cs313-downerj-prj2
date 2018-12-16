@@ -12,7 +12,8 @@ $(document).ready(() => {
                 let imgCell = tableRow.insertCell();
                 let img = constructElement('IMG', {
                     src: `./assets/images/chips/${dataRow.filename}`,
-                    alt: dataRow.filename,
+                    alt: 'N/A',
+                    title: dataRow.name,
                 });
                 img.style.width = '64px';
                 img.style.height = '56px';
