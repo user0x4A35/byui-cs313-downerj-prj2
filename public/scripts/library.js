@@ -39,11 +39,11 @@ $(document).ready(() => {
                         case 'id':
                             let id = dataRow[key];
                             if (id >= 300 && id < 400) {
-                                value = id - 300;
+                                value = `M&mdash;${id - 300}`;
                             } else if (id >= 400) {
-                                value = id - 400;
+                                value = `G&mdash;${id - 400}`;
                             } else {
-                                value = id;
+                                value = `S&mdash;${id}`;
                             }
                             break;
                         case 'rarity':
