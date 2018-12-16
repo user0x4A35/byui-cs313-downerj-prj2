@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Joystix Mono Regular';
+    font-family: 'Press Start 2P Regular';
     font-size: 14px;
     background-color: #000;
     color: #eef;
@@ -24,6 +24,10 @@ body {
 
 .u-table {
     border-collapse: collapse;
+}
+
+.u-table tr:hover {
+    background-color: #008;
 }
 
 .u-table th {
