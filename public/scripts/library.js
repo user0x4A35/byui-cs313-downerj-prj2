@@ -98,15 +98,23 @@ function populateTable(dataRows) {
 }
 
 function sortTableBy(key) {
-    dataRows.sort((lhs, rhs) => {
+    function comparator(lhs, rhs) {
         if (lhs[key] > rhs[key]) {
             return +1;
         } else if (lhs[key] < rhs[key]) {
             return -1;
         } else {
-            return 0;
+            if (lhs.id > rhs.id) {
+                return +1;
+            } else if (lhs.id < rhs.id) {
+                return -1;
+            } else {
+                return 0;
+            }
         }
-    });
+    }
+
+    dataRows.sort(comparator);
 
     let theadRow = thead.rows[0];
     for (let cell of theadRow.cells) {
