@@ -44,11 +44,26 @@ h1, h2, h3, h4 {
 
 .u-table th {
     background-color: #f00;
-    color: #000;
+    color: #555;
     position: sticky;
     top: 0;
     text-align: left;
     padding: 5px;
+}
+
+.u-table th.u-th-selected {
+    background-color: #ff0;
+}
+
+.u-table th.u-th-selectable {
+    /* text-decoration: underline; */
+    color: #000;
+}
+
+.u-table th.u-th-selectable:hover {
+    cursor: pointer;
+    background-color: #00f;
+    color: #fff;
 }
 
 .u-table td {
@@ -63,8 +78,8 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
-.u-table tr:hover {
+.u-table tbody tr:hover {
     background-color: #f00;
     cursor: pointer;
-    /* color: #fff; */
+    color: #fff;
 }
