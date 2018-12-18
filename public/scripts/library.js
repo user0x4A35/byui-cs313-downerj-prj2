@@ -11,7 +11,7 @@ const theadToKeyMap = {
     'Elem': 'element',
     'Type': 'chiptype',
 };
-let sortingBy = 'id';
+let sortingKey = 'id';
 let imageElems = {};
 
 $(document).ready(() => {
@@ -22,10 +22,9 @@ $(document).ready(() => {
             dataRows = Object.keys(data.rows).map((key) => {
                 return data.rows[key];
             });
-            dataTemp = dataRows;
 
             getImages(dataRows);
-            sortTableBy('id');
+            resetTableFilter();
         },
         error: (jqXHR, textStatus, errorThrown) => {
             console.error(errorThrown);
@@ -129,6 +128,7 @@ function sortTableBy(key) {
     }
     clearTable();
     populateTable(dataTemp);
+    sortingKey = key;
 }
 
 function filterTableBy(key, conditional) {
@@ -141,9 +141,15 @@ function filterTableBy(key, conditional) {
     populateTable(dataTemp);
 }
 
+function resetTableFilter() {
+    dataTemp = dataRows;
+    clearTable();
+    sortTableBy(sortingKey);
+}
+
 function filterTableByStringContaining(key, regex) {
     filterTableBy(key, (value) => {
-        return value.search(regex) >= 0;
+        return value.toString().search(regex) >= 0;
     });
 }
 
