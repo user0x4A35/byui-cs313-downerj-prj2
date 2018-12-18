@@ -18,13 +18,29 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Press Start 2P Regular';
+    font-family: 'Joystix Mono Regular';
     color: #fff;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 16px;
 }
 
 a, a:visited {
     text-decoration: none;
     color: #fff;
+}
+
+.u-pull-right {
+    float: right;
 }
 
 .u-link-button {
@@ -39,6 +55,49 @@ a, a:visited {
 .u-link-button:hover {
     color: #00f;
     background-color: #fff;
+}
+
+.u-button {
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    background-color: #0ff;
+    display: inline-block;
+    border: none;
+    font-family: 'Joystix Mono Regular';
+    font-size: 14px;
+}
+
+.u-button:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.u-fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.u-text-input {
+    background-color: #fff;
+    color: #007;
+    border: 1px solid #00f;
+    padding: 3px;
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 14px;
+}
+
+.u-fill {
+    width: 100%;
+}
+
+.u-pointer {
+    cursor: pointer;
+}
+
+.u-options {
+    background-color: #aef;
+    padding: 10px;
 }
 
 .u-meta-wrapper {

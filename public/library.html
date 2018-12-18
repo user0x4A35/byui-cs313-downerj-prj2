@@ -18,6 +18,75 @@
                 <h3>Mega Man Battle Network 3: White</h3>
             </div> <!-- u-container -->
             <div class="u-container">
+                <div class="u-button-container">
+                    <button class="u-button" onclick="toggleFilterContainer();">Filter</button>
+                    <div id="div-filters" class="u-options">
+                        Filter by:
+                        <table>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="none" />None</label></td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="id" />ID</label></td>
+                                <td><input type="text" id="txt-id-from" placeholder="From" class="u-text-input u-fill" /></td>
+                                <td><input type="text" id="txt-id-to" placeholder="To" class="u-text-input u-fill" /></td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="name" />Name</label></td>
+                                <td colspan="2"><input type="text" id="txt-name-regex" placeholder="/Regex/" class="u-text-input u-fill" /></td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="damage" />Damage</label></td>
+                                <td><input type="text" id="txt-damage-from" placeholder="From" class="u-text-input u-fill" /></td>
+                                <td><input type="text" id="txt-damage-to" placeholder="To" class="u-text-input u-fill" /></td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="memory" />Memory</label></td>
+                                <td><input type="text" id="txt-memory-from" placeholder="From" class="u-text-input u-fill" /></td>
+                                <td><input type="text" id="txt-memory-to" placeholder="To" class="u-text-input u-fill" /></td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="rarity" />Rarity</label></td>
+                                <td colspan="2">
+                                    <select id="sel-rarity" class="u-text-input u-fill">
+                                        <option value="0">No Stars</option>
+                                        <option value="1">&#x2605;</option>
+                                        <option value="2">&#x2605;&#x2605;</option>
+                                        <option value="3">&#x2605;&#x2605;&#x2605;</option>
+                                        <option value="4">&#x2605;&#x2605;&#x2605;&#x2605;</option>
+                                        <option value="5">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="element" />Element</label></td>
+                                <td colspan="2">
+                                    <select id="sel-element" class="u-text-input u-fill">
+                                        <option value="none">None</option>
+                                        <option value="fire">Fire</option>
+                                        <option value="wood">Wood</option>
+                                        <option value="elec">Elec</option>
+                                        <option value="water">Water</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="chiptype" />Type</label></td>
+                                <td colspan="2">
+                                    <select id="sel-chiptype" class="u-text-input u-fill">
+                                        <option value="STANDARD">Standard</option>
+                                        <option value="MEGA">Mega</option>
+                                        <option value="GIGA">Giga</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label class="u-pointer"><input type="radio" name="filter-key" value="memory" />Codes</label></td>
+                                <td colspan="2"><input type="text" id="txt-memory-from" placeholder="*ABCDEFG..." class="u-text-input u-fill" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <table id="tbl-chip-list" class="u-table">
                     <thead>
                         <tr>

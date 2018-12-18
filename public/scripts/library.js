@@ -13,6 +13,8 @@ const theadToKeyMap = {
 };
 let sortingKey = 'id';
 let imageElems = {};
+let $divFilters = $('#div-filters');
+let filtersVisible = false;
 
 $(document).ready(() => {
     $.get({
@@ -30,6 +32,10 @@ $(document).ready(() => {
             console.error(errorThrown);
         },
     });
+
+    toggleFilterContainer(false);
+
+    $()
 });
 
 function clearTable() {
@@ -175,4 +181,18 @@ function filterTableByNumberLessThanOrEqualTo(key, maxim) {
     filterTableBy(key, (value) => {
         return Number(value) <= maxim;
     });
+}
+
+function toggleFilterContainer(overrideValue) {
+    if (overrideValue !== null && overrideValue !== undefined) {
+        filtersVisible = !!overrideValue;
+    } else {
+        filtersVisible = !filtersVisible;
+    }
+
+    if (filtersVisible) {
+        $divFilters.css('display', '');
+    } else {
+        $divFilters.css('display', 'none');
+    }
 }
