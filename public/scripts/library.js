@@ -1,7 +1,8 @@
-let dataRows = [];
-let dataTemp = [];
-let thead = $('#tbl-chip-list > thead')[0];
-let tbody = $('#tbl-chip-list > tbody:last-child')[0];
+const thead = $('#tbl-chip-list > thead')[0];
+const tbody = $('#tbl-chip-list > tbody:last-child')[0];
+const $frmFilters = $('#frm-filters');
+const frmFilters = $frmFilters[0];
+
 const theadToKeyMap = {
     'ID': 'id',
     'Name': 'name',
@@ -11,9 +12,11 @@ const theadToKeyMap = {
     'Elem': 'element',
     'Type': 'chiptype',
 };
+
+let dataRows = [];
+let dataTemp = [];
 let sortingKey = 'id';
 let imageElems = {};
-let $divFilters = $('#div-filters');
 let filtersVisible = false;
 
 $(document).ready(() => {
@@ -35,7 +38,10 @@ $(document).ready(() => {
 
     toggleFilterContainer(false);
 
-    $()
+    // prevent submit-on-enter
+    $frmFilters.submit(() => {
+        return false;
+    });
 });
 
 function clearTable() {
@@ -76,6 +82,7 @@ function populateTable(tempDataRows) {
                         .split(/\,\s*/)
                         .sort()
                         .join('');
+                    dataRow[key] = value;
                     break;
                 case 'id':
                     if (value >= 300 && value < 400) {
@@ -137,12 +144,17 @@ function sortTableBy(key) {
     sortingKey = key;
 }
 
-function filterTableBy(key, conditional) {
+function filterTableByConditionals(conditionals) {
     function filterFunc(row) {
-        return conditional(row[key]);
+        for (let conditional of conditionals) {
+            if (!conditional(row)) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    dataTemp = dataTemp.filter(filterFunc);
+    dataTemp = dataRows.filter(filterFunc);
     clearTable();
     populateTable(dataTemp);
 }
@@ -153,36 +165,6 @@ function resetTableFilter() {
     sortTableBy(sortingKey);
 }
 
-function filterTableByStringContaining(key, regex) {
-    filterTableBy(key, (value) => {
-        return value.toString().search(regex) >= 0;
-    });
-}
-
-function filterTableByNumberEqualTo(key, target) {
-    filterTableBy(key, (value) => {
-        return Number(value) === target;
-    });
-}
-
-function filterTableByNumberNotEqualTo(key, target) {
-    filterTableBy(key, (value) => {
-        return Number(value) !== target;
-    });
-}
-
-function filterTableByNumberGreaterThanOrEqualTo(key, minim) {
-    filterTableBy(key, (value) => {
-        return Number(value) >= minim;
-    });
-}
-
-function filterTableByNumberLessThanOrEqualTo(key, maxim) {
-    filterTableBy(key, (value) => {
-        return Number(value) <= maxim;
-    });
-}
-
 function toggleFilterContainer(overrideValue) {
     if (overrideValue !== null && overrideValue !== undefined) {
         filtersVisible = !!overrideValue;
@@ -191,8 +173,103 @@ function toggleFilterContainer(overrideValue) {
     }
 
     if (filtersVisible) {
-        $divFilters.css('display', '');
+        $frmFilters.css('display', '');
     } else {
-        $divFilters.css('display', 'none');
+        $frmFilters.css('display', 'none');
     }
+}
+
+function applyFilters() {
+    let data = new FormData(frmFilters);
+    let nameRegex = data.get('name-regex').trim();
+    let damageFrom = data.get('damage-from').trim();
+    let damageTo = data.get('damage-to').trim();
+    let memoryFrom = data.get('memory-from').trim();
+    let memoryTo = data.get('memory-to').trim();
+    let rarity = data.get('rarity');
+    let element = data.get('element');
+    let chipType = data.get('chiptype');
+    let codes = data.get('codes').trim();
+
+    let filters = [];
+
+    if (nameRegex) {
+        filters.push((dataRow) => {
+            let value = dataRow.name;
+            return value.toString().search(nameRegex) >= 0;
+        });
+    }
+    if (damageFrom || damageTo) {
+        filters.push((dataRow) => {
+            let value = dataRow.damage;
+            let minim = damageFrom || 0;
+            let maxim = damageTo || 1000;
+            if (isSet(minim) && isSet(maxim)) {
+                return Number(value) >= minim && Number(value) <= maxim;
+            } else if (isSet(minim)) {
+                return Number(value) >= minim;
+            } else if (isSet(maxim)) {
+                return Number(value) <= maxim;
+            } else {
+                return true;
+            }
+        });
+    }
+    if (memoryFrom || memoryTo) {
+        filters.push((dataRow) => {
+            let value = dataRow.value;
+            let minim = memoryFrom || 0;
+            let maxim = memoryTo || 1000;
+            if (isSet(minim) && isSet(maxim)) {
+                return Number(value) >= minim && Number(value) <= maxim;
+            } else if (isSet(minim) && !isSet(maxim)) {
+                return Number(value) >= minim;
+            } else if (!isSet(minim) && isSet(maxim)) {
+                return Number(value) <= maxim;
+            } else {
+                return true;
+            }
+        });
+    }
+    if (rarity && rarity !== '*') {
+        filters.push((dataRow) => {
+            let value = Number(dataRow.rarity);
+            rarity = Number(rarity);
+            if (rarity === 0) {
+                return !value;
+            } else {
+                return value === rarity;
+            }
+        });
+    }
+    if (element && element !== '*') {
+        filters.push((dataRow) => {
+            let value = dataRow.element;
+            if (element === 'none') {
+                return !value;
+            } else {
+                return value === element;
+            }
+        });
+    }
+    if (chipType && chipType !== '*') {
+        filters.push((dataRow) => {
+            let value = dataRow.chiptype;
+            return value === chipType;
+        });
+    }
+    if (codes) {
+        filters.push((dataRow) => {
+            let values = dataRow.codes.split('');
+            codes = codes.toString().split(/\s*/);
+            for (let value of values) {
+                if (codes.indexOf(value) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        });
+    }
+
+    filterTableByConditionals(filters);
 }

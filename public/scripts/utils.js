@@ -1,3 +1,7 @@
+function isSet(value) {
+    return value !== null && value !== undefined;
+}
+
 function byId(id) {
     return document.getElementById(id);
 }
