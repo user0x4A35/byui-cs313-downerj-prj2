@@ -1,4 +1,5 @@
 let dataRows = [];
+let dataTemp = [];
 let thead = $('#tbl-chip-list > thead')[0];
 let tbody = $('#tbl-chip-list > tbody:last-child')[0];
 const theadToKeyMap = {
@@ -10,6 +11,7 @@ const theadToKeyMap = {
     'Elem': 'element',
     'Type': 'chiptype',
 };
+let sortingBy = 'id';
 let imageElems = {};
 
 $(document).ready(() => {
@@ -20,9 +22,10 @@ $(document).ready(() => {
             dataRows = Object.keys(data.rows).map((key) => {
                 return data.rows[key];
             });
+            dataTemp = dataRows;
 
             getImages(dataRows);
-            populateTable(dataRows);
+            sortTableBy('id');
         },
         error: (jqXHR, textStatus, errorThrown) => {
             console.error(errorThrown);
@@ -49,8 +52,8 @@ function getImages(dataRows) {
     }
 }
 
-function populateTable(dataRows) {
-    for (let dataRow of dataRows) {
+function populateTable(tempDataRows) {
+    for (let dataRow of tempDataRows) {
         let tableRow = tbody.insertRow();
 
         let imgCell = tableRow.insertCell();
@@ -114,7 +117,7 @@ function sortTableBy(key) {
         }
     }
 
-    dataRows.sort(comparator);
+    dataTemp.sort(comparator);
 
     let theadRow = thead.rows[0];
     for (let cell of theadRow.cells) {
@@ -125,5 +128,45 @@ function sortTableBy(key) {
         }
     }
     clearTable();
-    populateTable(dataRows);
+    populateTable(dataTemp);
+}
+
+function filterTableBy(key, conditional) {
+    function filterFunc(row) {
+        return conditional(row[key]);
+    }
+
+    dataTemp = dataTemp.filter(filterFunc);
+    clearTable();
+    populateTable(dataTemp);
+}
+
+function filterTableByStringContaining(key, regex) {
+    filterTableBy(key, (value) => {
+        return value.search(regex) >= 0;
+    });
+}
+
+function filterTableByNumberEqualTo(key, target) {
+    filterTableBy(key, (value) => {
+        return Number(value) === target;
+    });
+}
+
+function filterTableByNumberNotEqualTo(key, target) {
+    filterTableBy(key, (value) => {
+        return Number(value) !== target;
+    });
+}
+
+function filterTableByNumberGreaterThanOrEqualTo(key, minim) {
+    filterTableBy(key, (value) => {
+        return Number(value) >= minim;
+    });
+}
+
+function filterTableByNumberLessThanOrEqualTo(key, maxim) {
+    filterTableBy(key, (value) => {
+        return Number(value) <= maxim;
+    });
 }

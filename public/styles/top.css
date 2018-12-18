@@ -22,6 +22,25 @@ h1, h2, h3, h4 {
     color: #fff;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.u-link-button {
+    display: inline-block;
+    border: 2px solid #fff;
+    margin-bottom: 2px;
+    padding: 5px;
+    color: fff;
+    background-color: #00f;
+}
+
+.u-link-button:hover {
+    color: #00f;
+    background-color: #fff;
+}
+
 .u-meta-wrapper {
     max-width: 1000px;
     margin: 10px auto 10px auto;
