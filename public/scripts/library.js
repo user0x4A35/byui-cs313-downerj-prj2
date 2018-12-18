@@ -131,6 +131,7 @@ function sortTableBy(key) {
 
     dataTemp.sort(comparator);
 
+    sortingKey = key;
     let theadRow = thead.rows[0];
     for (let cell of theadRow.cells) {
         if (theadToKeyMap[cell.innerHTML] === key) {
@@ -141,7 +142,6 @@ function sortTableBy(key) {
     }
     clearTable();
     populateTable(dataTemp);
-    sortingKey = key;
 }
 
 function filterTableByConditionals(conditionals) {
@@ -156,7 +156,7 @@ function filterTableByConditionals(conditionals) {
 
     dataTemp = dataRows.filter(filterFunc);
     clearTable();
-    populateTable(dataTemp);
+    sortTableBy('id');
 }
 
 function resetTableFilter() {
