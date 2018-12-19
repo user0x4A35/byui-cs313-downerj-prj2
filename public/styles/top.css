@@ -134,7 +134,6 @@ a, a:visited {
 }
 
 .u-table th.u-th-selectable {
-    /* text-decoration: underline; */
     color: #000;
 }
 
@@ -157,7 +156,7 @@ a, a:visited {
 }
 
 .u-table tbody tr:hover {
-    background-color: #f00;
-    cursor: pointer;
-    color: #fff;
+    background-color: #ecc;
+    cursor: cell;
+    /* color: #fff; */
 }

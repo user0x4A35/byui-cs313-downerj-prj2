@@ -179,6 +179,54 @@ function toggleFilterContainer(overrideValue) {
     }
 }
 
+function generateStringRegexComparator(key, regex) {
+    return (dataRow) => {
+        let value = dataRow[key];
+        return value.toString().search(regex) >= 0;
+    };
+}
+
+function generateNumberBoundsComparator(key, minim, maxim) {
+    return (dataRow) => {
+        let value = dataRow[key];
+        minim = minim || 0;
+        maxim = maxim || 1000;
+        if (isSet(minim) && isSet(maxim)) {
+            return Number(value) >= minim && Number(value) <= maxim;
+        } else if (isSet(minim)) {
+            return Number(value) >= minim;
+        } else if (isSet(maxim)) {
+            return Number(value) <= maxim;
+        } else {
+            return true;
+        }
+    };
+}
+
+function generateStringEqualityComparator(key, rhs, falseValue) {
+    return (dataRow) => {
+        let value = dataRow[key];
+        if (rhs === falseValue) {
+            return !value;
+        } else {
+            return value === rhs;
+        }
+    };
+}
+
+function generateStringByCharsZipComparator(key, rhs, regex) {
+    return (dataRow) => {
+        let values = dataRow[key].split('');
+        rhs = rhs.toString().split(regex);
+        for (let value of values) {
+            if (rhs.indexOf(value) >= 0) {
+                return true;
+            }
+        }
+        return false;
+    };
+}
+
 function applyFilters() {
     let data = new FormData(frmFilters);
     let nameRegex = data.get('name-regex').trim();
@@ -190,67 +238,22 @@ function applyFilters() {
     let element = data.get('element');
     let chipType = data.get('chiptype');
     let codes = data.get('codes').trim();
-
     let filters = [];
 
     if (nameRegex) {
-        filters.push((dataRow) => {
-            let value = dataRow.name;
-            return value.toString().search(nameRegex) >= 0;
-        });
+        filters.push(generateStringRegexComparator('name', nameRegex));
     }
     if (damageFrom || damageTo) {
-        filters.push((dataRow) => {
-            let value = dataRow.damage;
-            let minim = damageFrom || 0;
-            let maxim = damageTo || 1000;
-            if (isSet(minim) && isSet(maxim)) {
-                return Number(value) >= minim && Number(value) <= maxim;
-            } else if (isSet(minim)) {
-                return Number(value) >= minim;
-            } else if (isSet(maxim)) {
-                return Number(value) <= maxim;
-            } else {
-                return true;
-            }
-        });
+        filters.push(generateNumberBoundsComparator('damage', damageFrom, damageTo));
     }
     if (memoryFrom || memoryTo) {
-        filters.push((dataRow) => {
-            let value = dataRow.value;
-            let minim = memoryFrom || 0;
-            let maxim = memoryTo || 1000;
-            if (isSet(minim) && isSet(maxim)) {
-                return Number(value) >= minim && Number(value) <= maxim;
-            } else if (isSet(minim) && !isSet(maxim)) {
-                return Number(value) >= minim;
-            } else if (!isSet(minim) && isSet(maxim)) {
-                return Number(value) <= maxim;
-            } else {
-                return true;
-            }
-        });
+        filters.push(generateNumberBoundsComparator('memory', memoryFrom, memoryTo));
     }
     if (rarity && rarity !== '*') {
-        filters.push((dataRow) => {
-            let value = Number(dataRow.rarity);
-            rarity = Number(rarity);
-            if (rarity === 0) {
-                return !value;
-            } else {
-                return value === rarity;
-            }
-        });
+        filters.push(generateStringEqualityComparator('rarity', rarity, 0));
     }
     if (element && element !== '*') {
-        filters.push((dataRow) => {
-            let value = dataRow.element;
-            if (element === 'none') {
-                return !value;
-            } else {
-                return value === element;
-            }
-        });
+        filters.push(generateStringEqualityComparator('element', element, 'none'));
     }
     if (chipType && chipType !== '*') {
         filters.push((dataRow) => {
@@ -259,16 +262,7 @@ function applyFilters() {
         });
     }
     if (codes) {
-        filters.push((dataRow) => {
-            let values = dataRow.codes.split('');
-            codes = codes.toString().split(/\s*/);
-            for (let value of values) {
-                if (codes.indexOf(value) >= 0) {
-                    return true;
-                }
-            }
-            return false;
-        });
+        filters.push(generateStringByCharsZipComparator('codes', codes, /[\s,]*/));
     }
 
     filterTableByConditionals(filters);
