@@ -29,6 +29,7 @@ $(document).ready(() => {
             });
 
             getImages(dataRows);
+            frmFilters.reset();
             resetTableFilter();
         },
         error: (jqXHR, textStatus, errorThrown) => {
