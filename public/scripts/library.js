@@ -12,6 +12,7 @@ const theadToKeyMap = {
     'Elem': 'element',
     'Type': 'chiptype',
 };
+const NULL_FILLER = '—';
 
 let dataRows = [];
 let dataTemp = [];
@@ -55,7 +56,7 @@ function getImages(dataRows) {
     for (let dataRow of dataRows) {
         let img = constructElement('IMG', {
             src: `./assets/images/chips/${dataRow.filename}`,
-            alt: '—',
+            alt: NULL_FILLER,
             title: dataRow.name,
         });
         img.style.width = '64px';
@@ -64,22 +65,73 @@ function getImages(dataRows) {
     }
 }
 
+function chipIDToExplicitID(id) {
+    if (id >= 300 && id < 400) {
+        return `M—${id - 300}`;
+    } else if (id >= 400) {
+        return `G—${id - 400}`;
+    } else {
+        return `S—${id}`;
+    }
+}
+
+function explicitIDToChipID(id) {
+    let values = id.split('—');
+    switch (values[0]) {
+        case 'S':
+            return Number(values[1]);
+        case 'M':
+            return Number(values[1]) + 300;
+        case 'G':
+            return Number(values[1]) + 400;
+    }
+}
+
+function chipTypeToShortType(type) {
+    if (type === 'STANDARD') {
+        return 'STND';
+    } else {
+        return type;
+    }
+}
+
+function shortTypeToChipType(type) {
+    if (type === 'STND') {
+        return 'STANDARD';
+    } else {
+        return type;
+    }
+}
+
+function coerceTextNonEmpty(value) {
+    let text = (value || '').toString().trim();
+    if (!value || !text || text.length === 0) {
+        text = NULL_FILLER;
+    }
+    return text;
+}
+
+function fromCoercedString(value) {
+    return (value === NULL_FILLER) ? '' : value;
+}
+
 function generateOnSubmitEditCallback(cell, input, rowID, key) {
     return () => {
-        cell.innerHTML = input.value;
+        cell.innerHTML = coerceTextNonEmpty(input.value);
         input.remove();
     };
 }
 
 function generateOnEditCallback(cell, rowID, key) {
     return () => {
-        let text = cell.innerHTML;
+        let value = cell.innerHTML;
         let txtInput = constructElement('INPUT', {
             type: 'text',
             name: key,
-            value: text,
+            value: fromCoercedString(value),
         });
         txtInput.classList.add('u-text-input');
+
         txtInput.addEventListener('blur', generateOnSubmitEditCallback(cell, txtInput, rowID, key));
         cell.innerHTML = '';
         cell.appendChild(txtInput);
@@ -96,6 +148,7 @@ function populateTable(tempDataRows) {
 
         for (let key in dataRow) {
             let value = dataRow[key];
+            let toolTip = null;
 
             switch (key) {
                 case 'filename':
@@ -109,21 +162,14 @@ function populateTable(tempDataRows) {
                     dataRow[key] = value;
                     break;
                 case 'id':
-                    if (value >= 300 && value < 400) {
-                        value = `M&mdash;${value - 300}`;
-                    } else if (value >= 400) {
-                        value = `G&mdash;${value - 400}`;
-                    } else {
-                        value = `S&mdash;${value}`;
-                    }
+                    toolTip = `ID: ${value}`;
+                    value = chipIDToExplicitID(value);
                     break;
                 case 'rarity':
                     value = parseInt(value);
                     break;
                 case 'chiptype':
-                    if (value === 'STANDARD') {
-                        value = 'STND';
-                    }
+                    value = chipTypeToShortType(value);
                     break;
             }
 
@@ -131,9 +177,14 @@ function populateTable(tempDataRows) {
             if (key === 'codes') {
                 cell.style.fontFamily = 'monospace';
             }
-            cell.innerHTML = (value) ? value : '&mdash;';
+            // cell.innerHTML = (value) ? value : '&mdash;';
+            cell.innerHTML = coerceTextNonEmpty(value);
+            if (toolTip) {
+                cell.title = toolTip;
+            }
 
-            if (key !== 'filename') {
+            // add ability to fill in elements and rarities at future date
+            if (key === 'element' || key === 'rarity') {
                 cell.addEventListener('dblclick', generateOnEditCallback(cell, dataRow.id, key));
             }
         } 
