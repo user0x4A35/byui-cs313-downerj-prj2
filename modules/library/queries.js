@@ -22,15 +22,20 @@ module.exports = {
     chipsPost: `INSERT INTO ${TBL_CHIP} `
         + `(id, name, damage, memory, description, filename, rarity, element, chiptype) `
         + `VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`,
+
     chipLinksPost: `INSERT INTO ${TBL_LINK} `
         + `(chip, code) `
         + `VALUES ($1, $2);`,
 
-    chipsPut: '',
-    chipsDelete: '',
+    chipPut: `UPDATE ${TBL_CHIP} `
+        + `SET $0 = $1 `
+        + `WHERE id = $2;`,
 
-    navicustGet: '',
-    navicustPost: '',
-    navicustPut: '',
-    navicustDelete: '',
+    chipLinkPut: ``,
+    chipsDelete: ``,
+
+    navicustGet: ``,
+    navicustPost: ``,
+    navicustPut: ``,
+    navicustDelete: ``,
 };

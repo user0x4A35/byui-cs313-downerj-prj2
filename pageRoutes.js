@@ -1,6 +1,6 @@
 module.exports = {
     goRoot: (req, res) => {
-        res.sendFile('index.html');
+        res.sendFile('hub.html');
     },
 
     goPlayer: (req, res) => {

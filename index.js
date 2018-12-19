@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-const pages = require('./pageRoutes.js');
+// const pages = require('./pageRoutes.js');
 const endpoints = require('./endpointRoutes.js');
 
 const PORT = process.env.PORT || 5000;
@@ -20,9 +20,9 @@ app
 /**
  * PAGES
  */
-.get('/', pages.goRoot)
-.get('/player', pages.goPlayer)
-.get('/library', pages.goLibrary)
+// .get('/', pages.goRoot)
+// .get('/player', pages.goPlayer)
+// .get('/library', pages.goLibrary)
 
 /**
  * ENDPOINTS : PLAYER : ACCOUNT

@@ -40,6 +40,7 @@ module.exports = {
                     res.end(message);
                 }).catch((err) => {
                     console.error(err);
+                    httpUtil.sendServerError(res, err);
                 });
             } catch (err) {
                 console.log(err);
@@ -48,7 +49,27 @@ module.exports = {
             }
         },
 
-        put: (req, res) => {},
+        put: (req, res) => {
+            if (!('id' in req.body)) {
+                httpUtil.sendUserError(res, 'Missing "id" argument in body');
+            } else if (!('key' in req.body)) {
+                httpUtil.sendUserError(res, 'Missing "key" argument in body');
+            } else if (!('value' in req.body)) {
+                httpUtil.sendUserError(res, 'Missing "value" argument in body');
+            } else if (req.body.key !== 'element' || req.body.key !== 'rarity') {
+                httpUtil.sendUserError(res, `Invalid field key "${req.body.key}"`);
+            }
+
+            updateChip(req.body.id, req.body.key, req.body.value)
+            .then(() => {
+                let message = 'PUT complete';
+                console.log(message);
+                res.end(message);
+            }).catch((err) => {
+                console.error(err);
+                httpUtil.sendServerError(res, err);
+            });
+        },
         delete: (req, res) => {},
     },
 
@@ -119,4 +140,12 @@ function addChips(chipType, chipList) {
     }
 
     return promises;
+}
+
+function updateChip(id, key, value) {
+    const PARAMS = [
+        value, id
+    ];
+
+    return dbUtil.doDatabase(dbQueries.chipPut.replace('$0', key), PARAMS);
 }

@@ -13,6 +13,7 @@ const theadToKeyMap = {
     'Type': 'chiptype',
 };
 const NULL_FILLER = '—';
+const ID_HYPHEN = '—';
 
 let dataRows = [];
 let dataTemp = [];
@@ -67,16 +68,16 @@ function getImages(dataRows) {
 
 function chipIDToExplicitID(id) {
     if (id >= 300 && id < 400) {
-        return `M—${id - 300}`;
+        return `M${ID_HYPHEN}${id - 300}`;
     } else if (id >= 400) {
-        return `G—${id - 400}`;
+        return `G${ID_HYPHEN}${id - 400}`;
     } else {
-        return `S—${id}`;
+        return `S${ID_HYPHEN}${id}`;
     }
 }
 
 function explicitIDToChipID(id) {
-    let values = id.split('—');
+    let values = id.split(ID_HYPHEN);
     switch (values[0]) {
         case 'S':
             return Number(values[1]);
@@ -115,9 +116,35 @@ function fromCoercedString(value) {
     return (value === NULL_FILLER) ? '' : value;
 }
 
-function generateOnSubmitEditCallback(cell, input, rowID, key) {
+function generateOnSubmitEditCallback(cell, input, oldValue, rowID, key) {
     return () => {
-        cell.innerHTML = coerceTextNonEmpty(input.value);
+        let newValue = fromCoercedString(input.value.trim());
+        oldValueTemp = fromCoercedString(oldValue);
+        if (newValue !== oldValueTemp) {
+            $.ajax({
+                method: 'PUT',
+                url: '/library/chiplist',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'text/plain',
+                },
+                processData: false,
+                data: JSON.stringify({
+                    'id': rowID,
+                    'key': key,
+                    'value': newValue,
+                }),
+                success: (data, textStatus, jqXHR) => {
+                    cell.innerHTML = coerceTextNonEmpty(input.value);
+                },
+                error: (jqXHR, textStatus, errorThrown) => {
+                    cell.innerHTML = oldValue;
+                    console.error(errorThrown);
+                },
+            });
+        } else {
+            cell.innerHTML = oldValue;
+        }
         input.remove();
     };
 }
@@ -132,7 +159,7 @@ function generateOnEditCallback(cell, rowID, key) {
         });
         txtInput.classList.add('u-text-input');
 
-        txtInput.addEventListener('blur', generateOnSubmitEditCallback(cell, txtInput, rowID, key));
+        txtInput.addEventListener('blur', generateOnSubmitEditCallback(cell, txtInput, value, rowID, key));
         cell.innerHTML = '';
         cell.appendChild(txtInput);
         txtInput.focus();

@@ -5,6 +5,12 @@ module.exports = {
         .end(`${msg}\n`);
     },
 
+    sendServerError: (res, msg) => {
+        res
+        .status(500)
+        .end(`${msg}\n`);
+    },
+
     sendJSONData: (res, data) => {
         res
         .status(200)
