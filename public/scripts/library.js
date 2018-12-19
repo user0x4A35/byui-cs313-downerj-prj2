@@ -124,10 +124,7 @@ function generateOnSubmitEditCallback(cell, input, oldValue, rowID, key) {
             $.ajax({
                 method: 'PUT',
                 url: '/library/chiplist',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'text/plain',
-                },
+                contentType: "application/json; charset=utf-8",
                 processData: false,
                 data: JSON.stringify({
                     'id': rowID,

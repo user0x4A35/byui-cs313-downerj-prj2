@@ -52,12 +52,16 @@ module.exports = {
         put: (req, res) => {
             if (!('id' in req.body)) {
                 httpUtil.sendUserError(res, 'Missing "id" argument in body');
+                return;
             } else if (!('key' in req.body)) {
                 httpUtil.sendUserError(res, 'Missing "key" argument in body');
+                return;
             } else if (!('value' in req.body)) {
                 httpUtil.sendUserError(res, 'Missing "value" argument in body');
-            } else if (req.body.key !== 'element' || req.body.key !== 'rarity') {
+                return;
+            } else if (req.body.key !== 'element' && req.body.key !== 'rarity') {
                 httpUtil.sendUserError(res, `Invalid field key "${req.body.key}"`);
+                return;
             }
 
             updateChip(req.body.id, req.body.key, req.body.value)
