@@ -64,6 +64,29 @@ function getImages(dataRows) {
     }
 }
 
+function generateOnSubmitEditCallback(cell, input, rowID, key) {
+    return () => {
+        cell.innerHTML = input.value;
+        input.remove();
+    };
+}
+
+function generateOnEditCallback(cell, rowID, key) {
+    return () => {
+        let text = cell.innerHTML;
+        let txtInput = constructElement('INPUT', {
+            type: 'text',
+            name: key,
+            value: text,
+        });
+        txtInput.classList.add('u-text-input');
+        txtInput.addEventListener('blur', generateOnSubmitEditCallback(cell, txtInput, rowID, key));
+        cell.innerHTML = '';
+        cell.appendChild(txtInput);
+        txtInput.focus();
+    };
+}
+
 function populateTable(tempDataRows) {
     for (let dataRow of tempDataRows) {
         let tableRow = tbody.insertRow();
@@ -109,6 +132,10 @@ function populateTable(tempDataRows) {
                 cell.style.fontFamily = 'monospace';
             }
             cell.innerHTML = (value) ? value : '&mdash;';
+
+            if (key !== 'filename') {
+                cell.addEventListener('dblclick', generateOnEditCallback(cell, dataRow.id, key));
+            }
         } 
     }
 }
@@ -215,10 +242,10 @@ function generateStringEqualityComparator(key, rhs, falseValue) {
     };
 }
 
-function generateStringByCharsZipComparator(key, rhs, regex) {
+function generateStringByCharsZipComparator(key, rhs, regexToSplitBy) {
     return (dataRow) => {
         let values = dataRow[key].split('');
-        rhs = rhs.toString().split(regex);
+        rhs = rhs.toString().split(regexToSplitBy);
         for (let value of values) {
             if (rhs.indexOf(value) >= 0) {
                 return true;
